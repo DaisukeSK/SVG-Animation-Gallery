@@ -45,7 +45,10 @@ fetch("./terms.json")
   svgForBorder.setAttribute("fill",svgBorderBG[level-1])
   console.log("fill1",svgBorderBG[level-1])
   console.log("attr",svgForBorder.getAttribute("fill"))
-  const aaa=()=>{
+
+  
+  ////////////////////// Function //////////////////////
+  const showQuestion=()=>{
     console.log("fill1",svgBorderBG[level-1])
   console.log("attr",svgForBorder.getAttribute("fill"))
     // animate.forEach(val=>{
@@ -101,7 +104,13 @@ fetch("./terms.json")
           levelDiv.style.animationName="shake2"
           levelNumber.style.animationName="newLevel"
           levelNumber.innerText=level
-          svgForBorder.setAttribute("fill",svgBorderBG[level-1])
+
+          if(level>=3){
+            svgForBorder.setAttribute("fill",svgBorderBG[2])
+          }else{
+            svgForBorder.setAttribute("fill",svgBorderBG[level-1])
+          }
+
         }else{
           frame.style.backgroundColor="lightgreen"
           checkSVG.style.display="block"
@@ -140,7 +149,7 @@ fetch("./terms.json")
         clearInterval(interval)
         
         setTimeout(()=>{
-          aaa()
+          showQuestion()
   
         }, 1000)
         timeBar.style.animationName=null
@@ -152,12 +161,10 @@ fetch("./terms.json")
       i--
     },1000)
     
+  }// showQuestion
   
   
-  }
-  
-  
-  
+  ////////////////////// Onclick //////////////////////
   document.querySelector(".start").onclick=(e)=>{
 
     console.log(e.target.parentNode)
@@ -176,7 +183,7 @@ fetch("./terms.json")
       clearInterval(initCount)
       growingCircle.style.display="none"
       container.style.display="block"
-      aaa()
+      showQuestion()
 
 
     },3000)

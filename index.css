@@ -4,7 +4,7 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 400px);
   grid-template-rows: repeat(3, 200px);
   width: -moz-fit-content;
   width: fit-content;
@@ -13,4 +13,22 @@ h1 {
 .container div {
   border: 1px solid grey;
   min-width: 400px;
+}
+.container div a {
+  text-decoration: none;
+}
+.container div a:visited {
+  color: black;
+}
+.container div img {
+  width: 50%;
+  height: 100px;
+  margin: 20px auto 10px;
+  display: block;
+}
+.container div h3, .container div p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 70%;
 }/*# sourceMappingURL=index.css.map */

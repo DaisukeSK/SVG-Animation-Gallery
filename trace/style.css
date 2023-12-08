@@ -164,6 +164,7 @@ body {
   width: 100%;
   background-color: rgba(50, 205, 50, 0.1);
   position: relative;
+  overflow: hidden;
 }
 .grid #fall .fallinDiv {
   pointer-events: none;
