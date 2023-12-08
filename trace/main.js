@@ -1,11 +1,19 @@
 document.querySelector("#trace .front").onmousemove=(e)=>{
   // console.log("e",e.offsetX,e.offsetY)
   // console.log("parent:",e.target.parentElement.querySelector(".output"))
-  const insert=`<div class="child" style="top:${e.offsetY}px; left:${e.offsetX}px; transform:translate(-50%,-50%);"></div>`
+
+  const insert=`
+  <div class="child" style="top:${e.offsetY}px; left:${e.offsetX}px;">
+  
+  </div>
+  `;
+  
   e.target.parentElement.insertAdjacentHTML("beforeend",insert)
   document.querySelector("#trace .child:last-of-type").onanimationend=(e)=>{e.target.remove()}
   console.log("trace",document.querySelectorAll(".child").length)
 }
+
+
 
 document.querySelector("#cross").onmousemove=(e)=>{
   // console.log("e",e.offsetX,e.offsetY)
@@ -118,7 +126,7 @@ document.querySelector("#fall").onmousemove=(e)=>{
 
 
   // console.log("offset",e.offsetY,e.offsetX)
-  const insert=`<div class="fallinDiv" style="top:${e.offsetY}px; left:${e.offsetX}px;"></div>`
+  const insert=`<div class="fallinDiv" style="top:${e.offsetY-3}px; left:${e.offsetX-3}px;"></div>`
   e.target.insertAdjacentHTML("beforeend",insert)
   // document.querySelector("#fall .fallinDiv:last-of-type").onanimationend=(e)=>{e.target.remove()}
   // console.log("fallin",document.querySelectorAll(".fallinDiv").length)

@@ -2,6 +2,7 @@
 
 const svgBorderBG=['lightblue','url(#bg1)','url(#bg2)','url(#bg3)']
 
+const instruction=document.querySelector(".instruction")
 const container=document.querySelector(".container")
 const frame=document.querySelector(".frame")
 const timeBar=document.querySelector(".timeBar")
@@ -159,6 +160,8 @@ fetch("./terms.json")
   
   document.querySelector(".start").onclick=(e)=>{
 
+    console.log(e.target.parentNode)
+    e.target.parentNode.style.display="none"
     let c=2
     const initCount=setInterval(()=>{
 
@@ -166,7 +169,7 @@ fetch("./terms.json")
       c--
     },1000)
     
-    e.target.style.display="none"
+    // e.target.style.display="none"
     growingCircle.style.opacity="1"
     growingCircle.querySelectorAll("animate").forEach(val=>{val.beginElement()})
     setTimeout(()=>{

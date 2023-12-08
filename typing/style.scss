@@ -6,24 +6,38 @@ body {
     height: 100vh;
 }
 
-
-
-
-.start {
+.initBox {
+    width: fit-content;
     position: absolute;
-    top: 250px;
     left: 50%;
-    transform: translateX(-50%);
+    top: 45%;
+    transform: translate(-50%,-50%);
+    // border: 1px solid grey;
 
-    font-size: 1.1em;
-    width: 100px;
-    // margin: 0 auto;
-    padding: 10px;
-    border: 1px solid grey;
-    border-radius: 10px;
-    text-align: center;
-    // z-index: 1;
+    h2, h3 {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+    
+    .start {
+        // position: absolute;
+        // top: 250px;
+        // left: 50%;
+        // transform: translateX(-50%);
+    
+        font-size: 1.1em;
+        width: 100px;
+        // margin: 0 auto;
+        padding: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px auto 0;
+        // z-index: 1;
+    }
 }
+
 .growingCircle {
     position: absolute;
     top: 170px;
