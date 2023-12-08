@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Trace</title>
+
+  </head>
+  <body>
+    <div class="grid">
+
+      <div id="trace"><div class="front"></div></div>
+
+      <div id="cross"><div class="front"></div></div>
+
+
+
+
+
+
+
+
+      <div id="scope">
+        <div class="blr"></div>
+        <div class="front"></div>
+
+
+        <!-- <img class="moveImg" src="download.png"> -->
+        <svg class="scope" width="100%" height="100%" stroke="none">
+          <defs>
+            <pattern id="img1" patternUnits="userSpaceOnUse" width="100%" height="100%">
+              <!-- <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/800px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg" x="0" y="0" width="100%" height="100%"/> -->
+              <image href="./smpl.jpg" x="0" y="0" width="100%" height="100%"/>
+
+            </pattern>
+          </defs>
+
+          <circle class="svgCrcl" cx="-10px" cy="-150px" r="70" fill="black" filter="blur(3px)"/>
+          
+          <circle class="svgCrcl" cx="-10px" cy="-150px" r="50" fill="url(#img1)"/>
+
+          <line class="lineTop" x1="-10px" y1="-75px" x2="-10px" y2="-100px" style="stroke:black; stroke-width:3px;"/>
+          <line class="lineBot" x1="-10px" y1="-75px" x2="-10px" y2="-100px" style="stroke:black; stroke-width:3px;"/>
+          <line class="lineLeft" x1="-75px" y1="-10px" x2="-100px" y2="-10px" style="stroke:black; stroke-width:3px;"/>
+          <line class="lineRight" x1="-75px" y1="-10px" x2="-100px" y2="-10px" style="stroke:black; stroke-width:3px;"/>
+          
+          <line class="lineVer" x1="-75px" y1="-10px" x2="-100px" y2="-10px" style="stroke:black; stroke-width:1px;"/>
+          <line class="lineHori" x1="-75px" y1="-10px" x2="-100px" y2="-10px" style="stroke:black; stroke-width:1px;"/>
+          <circle class="svgCrcl" cx="-10px" cy="-150px" r="15" fill="none" stroke="red"/>
+        </svg>
+
+        
+      </div>
+
+
+
+
+
+
+
+
+      
+
+      <div id="fall"><div class="front"></div></div>
+    </div>
+
+    
+    
+    <script src="main.js"></script>
+  </body>
+</html>

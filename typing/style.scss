@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+.start {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 1.1em;
+    width: 100px;
+    // margin: 0 auto;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    // z-index: 1;
+}
+.growingCircle {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    // display: none;
+    opacity: 0;
+    .middleInCircle {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        // left: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4em;
+        text-align: center;
+        .count3 {
+            // font-family: arial;
+            font-weight: bold;
+        }
+    }
+    svg{
+
+        // background-color:lightblue;
+        transform: rotate(-90deg);
+    }
+}
+
+.container {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    // margin: 100px auto;
+    // background-color: aqua;
+    // padding-top: 5px;
+    // border: 15px solid lightblue;
+    // background-color:chocolate;
+    display: none;
+
+    .checkSVG {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    
+    @keyframes comingFromLeft {
+        0% {
+            left:0;
+            opacity:0;
+        }
+        20% {
+            left:20px;
+            opacity:1;
+        }
+        80% {
+            left:20px;
+            opacity:1;
+        }
+        100% {
+            left:80px;
+            opacity:0;
+        }
+    }
+    .levelUp {
+        position: absolute;
+        top: 50px;
+        left: 40px;
+    
+        // background-color:lightgreen;
+        z-index: 1;
+        overflow: visible;
+        animation-name:comingFromLeft;
+        animation-duration: 1.5s;
+        animation-iteration-count:1;
+        animation-fill-mode: both;
+        text {
+        font-size:3em;
+        font-family: arial;
+        font-weight:900;
+        font-style:italic;
+        
+        }
+    }
+    .levelDown {
+        position: absolute;
+        top: 50px;
+        left: 40px;
+    
+        // background-color:lightgreen;
+        z-index: 1;
+        overflow: visible;
+        animation-name:comingFromLeft;
+        animation-duration: 1s;
+        animation-iteration-count:1;
+        animation-fill-mode: both;
+        text {
+            font-size:3em;
+            font-family: arial;
+            font-weight:900;
+            font-style:italic;
+        
+        }
+        
+    }
+    @keyframes shake {
+        0% {top:200px;}
+        15% {top:145px;}
+        30% {top:190px;}
+        45% {top:155px;}
+        60% {top:180px;}
+        75% {top:165px;}
+        100% {top:170px;}
+        
+    }
+
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+    .svgForBorder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        
+        rect {
+            // fill: lightblue;
+
+        }
+        
+    }
+    .timeBar {
+        position: absolute;
+        top: -25px;
+        left: 0;
+
+        // width: 100%;
+        height: 5px;
+        background-color: blue;
+
+        @keyframes shrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        // animation-iteration-count: infinite;
+        .secondHolder {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            bottom: 10px;
+            right: -14px;
+            // background-color: rgba(0, 255, 34, 0.7);
+
+            div {
+                font-size: 2em;
+                // color: red;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 30px;
+                // height: 30px;
+                // margin: 0;
+                // padding: 0;
+                text-align: center;
+
+                @keyframes countDown{
+                    from {
+                        font-size: 4em;
+                        color: black;
+                        opacity: 0;
+                    }
+                    to {
+                        font-size: 2em;
+                        color: black;
+                        opacity: 1;
+                    }
+                }
+                
+                // animation-name: countDown;
+                animation-duration: 1s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: 3;
+            }
+
+        }
+    }
+
+    .frame {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 360px;
+        height: 160px;
+
+        background-color: white;
+        border-radius: 30px;
+        box-sizing: border-box;
+        // margin: 0 auto;
+
+        @keyframes bgChange {
+            0% {
+            background-color: red;}
+            
+            100% {
+                background-color: white;}
+            
+        }
+    
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    
+        .level {
+            font-size: 1.2em;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            display: flex;
+            align-items: center;
+            &>div{
+                position: relative;
+
+                width: 20px;
+                height: 20px;
+                // background-color: rgb(204, 185, 185);
+
+                .levelNumber {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: fit-content;
+
+                    @keyframes newLevel {
+                        from {
+                            font-size: 5em;
+                            opacity: 0;
+                            color: blue;
+                        }
+                        to {
+                            font-size: 1em;
+                            opacity: 1;
+                            color: black;
+                        }
+                    }
+
+                    // animation-name: newLevel;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in;
+
+                }
+            }
+            @keyframes shake2 {
+                0% {right:17px;
+                color:yellow}
+                25% {right:30px}
+                50% {right:22px}
+                75% {right:27px}
+                100% {right:25px;
+                    color:black}
+                
+            }
+
+            // animation-name: shake2;
+            animation-duration: .5s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+        }
+    
+        .rslt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+        }
+        .question {
+            text-align: center;
+            // margin-top: 30px;
+        }
+        .inputField {
+            display: block;
+            margin: 0 auto;
+        }
+        .counter {
+            width: fit-content;
+            margin: 10px auto;
+
+            span {
+
+                @keyframes increaseCount {
+    
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+    
+                animation-duration: 1s;
+            }
+
+    
+        }
+    }
+}//container

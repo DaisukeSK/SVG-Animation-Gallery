@@ -1,0 +1,55 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: relative;
+}
+#root .bg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18000px;
+  height: 100vh;
+  background: linear-gradient(45deg, hsla(86, 90%, 46%, 0.3), hsla(22, 85%, 49%, 0.94), hsla(127, 96%, 49%, 0.73), hsla(268, 73%, 50%, 0.644), hsla(286, 84%, 65%, 0.75), hsla(173, 68%, 50%, 0.82), hsla(36, 84%, 45%, 0.65), hsla(27, 81%, 44%, 0.699), hsla(1, 100%, 48%, 0.84), hsla(146, 100%, 48%, 0.65), hsla(207, 62%, 58%, 0.356));
+  animation-name: left;
+  animation-iteration-count: infinite;
+  animation-duration: 400s;
+}
+@keyframes left {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -16000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+#root .bg2 {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 10000px;
+  background: linear-gradient(hsla(109, 92%, 72%, 0.75), hsla(27, 66%, 49%, 0.84), hsla(54, 100%, 50%, 0.73), hsla(173, 68%, 50%, 0.42), hsla(83, 80%, 45%, 0.65), hsla(1, 100%, 100%, 0.9), hsl(238, 61%, 79%), hsla(204, 85%, 49%, 0.822), hsla(306, 100%, 48%, 0.65));
+  animation-name: up;
+  animation-iteration-count: infinite;
+  animation-duration: 200s;
+}
+@keyframes up {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -8000px;
+  }
+  100% {
+    top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

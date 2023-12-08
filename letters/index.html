@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Typing</title>
+
+  </head>
+  <body>
+
+    
+
+    <div class="outputDiv">
+      <svg width="100%" height="100%">
+
+        <defs>
+          <radialGradient id="radial1" cy="50%" gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:darkblue">
+              <animate attributeName="offset" dur="3s" values="0;1" repeatCount="indefinite"/>
+          </stop>
+            <stop style="stop-color:cyan">
+              <animate attributeName="offset" dur="3s" values="0;1.7" repeatCount="indefinite"/>
+        </stop>
+            <stop style="stop-color:white">
+            <animate attributeName="offset" dur="3s" values="0;2.2" repeatCount="indefinite"/>
+          </stop>
+              <stop style="stop-color:cyan">
+                <animate attributeName="offset" dur="3s" values="0;2.5" repeatCount="indefinite"/>
+          </stop>
+            <stop style="stop-color:darkblue">
+              <animate attributeName="offset" dur="3s" values="0;2.7" repeatCount="indefinite"/>
+          </stop>
+          </radialGradient>
+
+
+          <pattern id="grad_anime" width="100%" height="100%">
+                
+            <rect x="0" width="100%" height="100%" fill="navy"/>
+      <rect x="0" width="100%" height="1" fill="blue">
+          <animate attributeName="y" values="25;0;20" dur="1s" repeatCount="indefinite">
+            </rect>
+        <rect x="0" width="100%" height="1" fill="blue">
+          <animate attributeName="y" values="3;70;50;20;8" dur="5s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" width="100%" height="2" fill="white">
+          <animate attributeName="y" values="53;60;30;70;48" dur="5s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" width="100%" height="2" fill="blue">
+          <animate attributeName="y" values="13;50;33;70;8" dur="3s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" width="100%" height="3" fill="blue">
+          <animate attributeName="y" values="1;45;10;50" dur="1s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" width="100%" height="4" fill="blue">
+          <animate attributeName="y" values="67;5;30;50" dur="2s" repeatCount="indefinite">
+        </rect>
+            
+            <rect x="0" width="100%" height="4" fill="white">
+          <animate attributeName="y" values="33;75;10;40;2" dur="5s" repeatCount="indefinite">
+        </rect>
+              <rect x="0" width="100%" height="2" fill="blue">
+          <animate attributeName="y" values="13;55;30;60;52" dur="3s" repeatCount="indefinite">
+        </rect>
+            
+            <rect x="0" width="100%" height="5" fill="blue">
+          <animate attributeName="y" values="15;50;20;77" dur="3s" repeatCount="indefinite">
+        </rect>
+    </pattern>
+
+
+
+    <linearGradient id="green" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop style="stop-color:#001F01;">
+        <animate attributeName="offset" values="-1;1" dur="3s" repeatCount="indefinite">
+      </stop>
+        <stop style="stop-color:green;">
+        <animate attributeName="offset" values="-0.6;1.4" dur="3s" repeatCount="indefinite">
+      </stop>
+      <stop style="stop-color:#00F604;">
+        <animate attributeName="offset" values="-0.3;1.7" dur="3s" repeatCount="indefinite">
+      </stop>
+        
+            <stop style="stop-color:white;">
+        <animate attributeName="offset" values="-0.05;1.95" dur="3s" repeatCount="indefinite">
+      </stop>
+      <stop style="stop-color:#001F01;">
+        <animate attributeName="offset" values="0;2" dur="3s" repeatCount="indefinite">
+      </stop>
+    </linearGradient>
+    
+    <pattern id="greengrid" width="100%" height="100%">
+          
+<!--             <rect x="0" width="100%" height="100%" fill="navy"/> -->
+
+      
+        
+        
+        <rect x="0" y="30" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="34" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="38" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="42" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="46" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="50" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="54" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="58" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="62" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="66" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="70" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="74" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="78" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+        <rect x="0" y="82" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+</pattern>
+        </defs>
+
+        <text text-anchor="middle"
+        x="50%"
+        y="50%" 
+        dy=".25em"
+        display="none"
+        class="outputTXT"
+          fill="none"
+          stroke="navy"
+          stroke-width="9"
+          style="font-weight: 900;
+          font-style: italic;
+          font-family: arial;
+          font-size: 5em;"></text>
+
+     <text text-anchor="middle"
+        x="50%"
+        y="50%" 
+        dy=".25em"
+        display="none"
+        class="outputTXT"
+          fill="url(#grad_anime)"
+          stroke="white"
+          stroke-width="3"
+          style="font-weight: 900;
+          font-style: italic;
+          font-family: arial;
+          font-size: 5em;"></text>
+
+    <!-- <text class="txt2" x="20" y="40" stroke="navy" stroke-width="7"
+            style='font-size:3em;
+            font-family: arial;
+            font-weight:900;
+            font-style:italic;'>LEVEL DOWN</text>
+    <text class="txt2" x="20" y="40" stroke="white" fill="url(#grad_anime)" stroke-width="3"style='font-size:3em;
+            font-family: arial;
+            font-weight:900;
+            font-style:italic;'>LEVEL DOWN</text> -->
+
+            <text class="initText" x="50%" y="50%" font-size="25">Type something below...</text>
+
+      </svg>
+    </div>
+
+    <div class="buttonHolder">
+
+      <button class="type">Type1</button>
+      <button class="type">Type2</button>
+      <button class="type">Type3</button>
+
+    </div>
+    <input class="Input" type="text" placeholder="Type something..."/>
+
+    
+    
+    <script src="main.js"></script>
+  </body>
+</html>

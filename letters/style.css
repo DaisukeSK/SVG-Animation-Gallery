@@ -1,0 +1,39 @@
+.outputDiv {
+  height: 150px;
+}
+.outputDiv svg {
+  overflow: visible;
+}
+.outputDiv svg .initText {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.buttonHolder {
+  width: 500px;
+  height: 50px;
+  background-color: darkseagreen;
+  margin: 0 auto;
+  padding-top: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Input {
+  margin: 20px auto;
+  display: block;
+}/*# sourceMappingURL=style.css.map */

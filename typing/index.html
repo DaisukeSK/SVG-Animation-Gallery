@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Typing</title>
+
+  </head>
+  <body>
+
+    
+    <div class="growingCircle">
+      <svg height="200" width="200">
+        <!-- A x-radius, y-radius, slope, 1or0, 1or0, x, y  -->
+        <circle cx="100" cy="100" r="80" fill="none" stroke-width="40">
+          
+            <animate attributeName="stroke-dasharray" dur="3s" values="0, 503; 503, 503" repeatCount="1"/>
+            <animate attributeName="stroke" dur="3s" values="blue;red" repeatCount="1"/>
+          </circle>
+        </svg>
+        
+        <div class="middleInCircle">
+          <div>Get ready...</div>
+          <div class="count3">3</div>
+          
+        </div>
+      </div>
+      
+      <div class="start">Start</div>
+
+    
+    <div class="container">
+
+      <svg class="checkSVG" width="100" height="80">
+        <defs>
+          <pattern id="checkSVG" width="100%" height="100%">
+            <rect x="0" y="0" width="400" height="100" fill="green">
+              <animate attributeName="width" values="0;100" dur=".5s" repeatCount="1"/>
+            </rect>
+          </pattern>
+        </defs>
+    <path d="M100 0 l-65 65 l-35 -35 l0 15 l35 35 l65 -65 Z" fill="url(#checkSVG)"/>
+    </svg>
+
+
+      <svg class="levelUp" width="400" height="50">
+        <defs>
+          <linearGradient id="grad_anime" x1="0%" y1="0%" x2="100%" y2="100%">
+            <!-- stop -->
+            <stop offset="-1" style="stop-color:navy;stop-opacity:1">
+            <animate attributeName="offset" dur="1s" values="-1;1" repeatCount="1" />
+            </stop>
+            <!-- stop -->
+            <stop offset="-0.5" style="stop-color:white;stop-opacity:1">
+            <animate attributeName="offset" dur="1s" values="-0.5;1.5" repeatCount="1" />
+            </stop>
+            <!-- stop -->
+            <stop offset="0" style="stop-color:navy;stop-opacity:1">
+              <animate attributeName="offset" dur="1s" values="0;2" repeatCount="1" />
+            </stop>
+            <!-- stop -->
+      <!--       <stop offset="1" style="stop-color:yellow;stop-opacity:1">
+            <animate attributeName="offset" dur="3s" values="1;1.5" repeatCount="indefinite" />
+            </stop> -->
+          </linearGradient>
+        </defs>
+        <text x="40" y="40" stroke="navy" stroke-width="6">LEVEL UP!</text>
+        <text x="40" y="40" stroke="url(#grad_anime)" fill="darkorange" stroke-width="3">LEVEL UP!</text>
+      <!--   <rect x="50%" y="40" rx="10" width="140" height="120" fill="url(#grad_anime)"/> -->
+      </svg>
+
+
+      <svg class="levelDown" width="430" height="50">
+        <defs>
+          <pattern id="levelDown_anime" width="100%" height="100%">
+            
+            <rect x="0" width="400" height="80" fill="lightblue"/>
+      <rect x="0" y="-50" width="400" height="1" fill="blue">
+          <animate attributeName="y" values="25;0;20" dur="1s" repeatCount="indefinite">
+            </rect>
+        <rect x="0" y="-50" width="400" height="1" fill="blue">
+          <animate attributeName="y" values="3;70;50;20;8" dur="5s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" y="-50" width="400" height="2" fill="white">
+          <animate attributeName="y" values="53;60;30;70;48" dur="5s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" y="-50" width="400" height="2" fill="blue">
+          <animate attributeName="y" values="13;50;33;70;8" dur="3s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" y="-50" width="400" height="3" fill="blue">
+          <animate attributeName="y" values="1;45;10;50" dur="1s" repeatCount="indefinite">
+        </rect>
+          
+          <rect x="0" y="-50" width="400" height="4" fill="blue">
+          <animate attributeName="y" values="67;5;30;50" dur="2s" repeatCount="indefinite">
+        </rect>
+            
+            <rect x="0" y="-50" width="400" height="4" fill="white">
+          <animate attributeName="y" values="33;75;10;40;2" dur="5s" repeatCount="indefinite">
+        </rect>
+              <rect x="0" y="-50" width="400" height="2" fill="blue">
+          <animate attributeName="y" values="13;55;30;60;52" dur="3s" repeatCount="indefinite">
+        </rect>
+            
+            <rect x="0" y="-50" width="400" height="5" fill="blue">
+          <animate attributeName="y" values="15;50;20;77" dur="3s" repeatCount="indefinite">
+        </rect>
+              <rect x="0" y="-50" width="400" height="2" fill="white">
+          <animate attributeName="y" values="44;22;66;77" dur="2s" repeatCount="indefinite">
+        </rect>
+    </pattern>
+          
+        </defs>
+       
+        <text x="0" y="40" stroke="navy" fill="url(#levelDown_anime)" stroke-width="3">LEVEL DOWN</text>
+      <!--   <rect x="50%" y="40" rx="10" width="140" height="120" fill="url(#grad_anime)"/> -->
+      </svg>
+
+
+
+
+      <div class="timeBar">
+        <div class="secondHolder"><div class="secondDiv"></div></div>
+      </div>
+      
+      <!-- <script src="test.js"></script> -->
+      <svg class="svgForBorder" width="100%" height="100%">
+        
+        
+        <defs class="borderDefs">
+          <!-- <rect id="radial1" x="0" y="0" width="100%" height="100%" fill="blue"/> -->
+        </defs>
+        
+
+        <rect x="0" y="0" rx="50" width="100%" height="100%">
+
+      </svg>
+
+      <div class="frame">
+
+  
+        <div class="level"><span>Level:</span><div><div class="levelNumber"></div></div></div>
+  
+        <p class="rslt"></p>
+  
+        <h1 class="question"></h1>
+        <input class="inputField" type="text"/>
+        <div class="counter">Winning Streak Counter: <b><span></span></b></div>
+
+      </div>
+
+
+
+    </div>
+    
+    <script src="svgBG.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

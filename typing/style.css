@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.start {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1em;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.growingCircle {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.growingCircle .middleInCircle {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  text-align: center;
+}
+.growingCircle .middleInCircle .count3 {
+  font-weight: bold;
+}
+.growingCircle svg {
+  transform: rotate(-90deg);
+}
+
+.container {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  display: none;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+.container .checkSVG {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+@keyframes comingFromLeft {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  20% {
+    left: 20px;
+    opacity: 1;
+  }
+  80% {
+    left: 20px;
+    opacity: 1;
+  }
+  100% {
+    left: 80px;
+    opacity: 0;
+  }
+}
+.container .levelUp {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  z-index: 1;
+  overflow: visible;
+  animation-name: comingFromLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.container .levelUp text {
+  font-size: 3em;
+  font-family: arial;
+  font-weight: 900;
+  font-style: italic;
+}
+.container .levelDown {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  z-index: 1;
+  overflow: visible;
+  animation-name: comingFromLeft;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.container .levelDown text {
+  font-size: 3em;
+  font-family: arial;
+  font-weight: 900;
+  font-style: italic;
+}
+@keyframes shake {
+  0% {
+    top: 200px;
+  }
+  15% {
+    top: 145px;
+  }
+  30% {
+    top: 190px;
+  }
+  45% {
+    top: 155px;
+  }
+  60% {
+    top: 180px;
+  }
+  75% {
+    top: 165px;
+  }
+  100% {
+    top: 170px;
+  }
+}
+.container .svgForBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.container .timeBar {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 5px;
+  background-color: blue;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+.container .timeBar .secondHolder {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+  right: -14px;
+}
+.container .timeBar .secondHolder div {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  text-align: center;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 3;
+}
+@keyframes countDown {
+  from {
+    font-size: 4em;
+    color: black;
+    opacity: 0;
+  }
+  to {
+    font-size: 2em;
+    color: black;
+    opacity: 1;
+  }
+}
+.container .frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 160px;
+  background-color: white;
+  border-radius: 30px;
+  box-sizing: border-box;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes bgChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: white;
+  }
+}
+.container .frame .level {
+  font-size: 1.2em;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+}
+.container .frame .level > div {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.container .frame .level > div .levelNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes newLevel {
+  from {
+    font-size: 5em;
+    opacity: 0;
+    color: blue;
+  }
+  to {
+    font-size: 1em;
+    opacity: 1;
+    color: black;
+  }
+}
+@keyframes shake2 {
+  0% {
+    right: 17px;
+    color: yellow;
+  }
+  25% {
+    right: 30px;
+  }
+  50% {
+    right: 22px;
+  }
+  75% {
+    right: 27px;
+  }
+  100% {
+    right: 25px;
+    color: black;
+  }
+}
+.container .frame .rslt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.container .frame .question {
+  text-align: center;
+}
+.container .frame .inputField {
+  display: block;
+  margin: 0 auto;
+}
+.container .frame .counter {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+}
+.container .frame .counter span {
+  animation-duration: 1s;
+}
+@keyframes increaseCount {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

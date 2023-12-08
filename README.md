@@ -1,1 +1,1 @@
-# SVG-Animation-Gallery
+# Animation-Gallery
