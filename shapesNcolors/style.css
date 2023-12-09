@@ -13,11 +13,7 @@ body .whiteBG {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 0;
 }
-
-#root {
-  position: relative;
-}
-#root .option {
+body .option {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -33,22 +29,22 @@ body .whiteBG {
   background-color: rgba(180, 180, 180, 0.5);
   border-radius: 10px;
 }
-#root .option .color1, #root .option .color2, #root .option .color3, #root .option .shape1, #root .option .shape2, #root .option .shape3 {
+body .option .color1, body .option .color2, body .option .color3, body .option .shape1, body .option .shape2, body .option .shape3 {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 5px;
 }
-#root .option .color1 svg, #root .option .color2 svg, #root .option .color3 svg, #root .option .shape1 svg, #root .option .shape2 svg, #root .option .shape3 svg {
+body .option .color1 svg, body .option .color2 svg, body .option .color3 svg, body .option .shape1 svg, body .option .shape2 svg, body .option .shape3 svg {
   display: block;
   margin: 0 auto;
 }
-#root .circle {
+body .circle {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-#root .circle svg {
+body .circle svg {
   position: absolute;
   overflow: visible;
   animation-name: blur;
