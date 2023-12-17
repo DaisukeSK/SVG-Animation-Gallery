@@ -389,16 +389,9 @@ const amount=document.querySelector('input[name="amount"]')
 // lightningDiv.insertAdjacentHTML("afterbegin",L3)
 
 centralize.oninput=(e)=>{
-   console.log("centralize", e.target.value)
-
-   console.log("start", e.target.value/2)
-
-   console.log("range", (100-e.target.value)*1)
-
+   
    clearInterval(lightningIntv)
    makeLightning(100+900*(1-amount.value), e.target.value)
-
-
 
 }
 
@@ -417,16 +410,6 @@ const makeLightning=(sec, center)=>{
 
    lightningIntv=setInterval(()=>{
    
-   
-      // document.querySelectorAll(".lightningSVG").forEach((val,key)=>{
-   
-      //    if(key>=20){
-      //       val.remove()
-      //    }
-   
-      // })
-      
-   
       const randNum=Math.ceil(Math.random()*6)
       
       const rand=Math.random()
@@ -438,14 +421,6 @@ const makeLightning=(sec, center)=>{
       lightningDiv.insertAdjacentHTML("afterbegin",LL)
       // console.log(lightningDiv.firstChild)
       lightningDiv.firstChild.onanimationend=(e)=>{e.target.remove()}
-   
-      // lightningDiv.firstChild.style.opacity=0;
-   
-
-      
-
-      
-      
       
       lightningDiv.firstChild.style.left=`${rand*100}%`
       
@@ -458,15 +433,7 @@ const makeLightning=(sec, center)=>{
       lightningDiv.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`
       lightningDiv.firstChild.style.animationDelay=`${rand*3}s`
       
-      // lightningDiv.firstChild.style.transform= `translate(-50%, ${0}px)`;
-      // console.log(lightningDiv.childNodes.length)
-      // if(lightningDiv.childNodes.length>=20){
-      //    lightningDiv.lastChild.remove()
-   
-   
-      // document.querySelector(".lightningSVG").onanimationend=(e)=>{e.target.remove()}
-      // console.log("Length:",lightningDiv.children.length)
-      // }
+      
    
    },sec)
 }
@@ -474,8 +441,6 @@ const makeLightning=(sec, center)=>{
 
 
 makeLightning(100+900*(1-amount.value), +centralize.value)
-
-
 
 
 const bgIntv=setInterval(()=>{

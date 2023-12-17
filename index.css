@@ -6,14 +6,13 @@ body h1 {
 }
 body .container {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
+  grid-template-columns: repeat(3, 400px);
   grid-template-rows: repeat(4, 200px);
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 body .container div {
-  border: 1px solid grey;
   width: 100%;
 }
 body .container div a {
