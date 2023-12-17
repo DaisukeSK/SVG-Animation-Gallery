@@ -7,17 +7,7 @@
 //   console.log("trace",document.querySelectorAll(".child").length)
 // }
 
-const aa= ()=>{
-  const aaa=2
-  setTimeout(()=>{
 
-  },0)
-  const bb =  2
-}
-
-aa.then(()=>{
-
-})
 
 // document.querySelector("#cross").onmousemove=(e)=>{
 //   // console.log("e",e.offsetX,e.offsetY)
@@ -37,8 +27,8 @@ document.querySelector(".scope").onmousemove=(e)=>{
   // console.log(e.offsetX)
   // console.log(e.target.querySelector("circle"))
 
-  // e.target.querySelector("circle").setAttribute("cx",`${e.offsetX}px`)
-  // e.target.querySelector("circle").setAttribute("cy",`${e.offsetY}px`)
+  e.target.querySelector("circle").setAttribute("cx",`${e.offsetX}px`)
+  e.target.querySelector("circle").setAttribute("cy",`${e.offsetY}px`)
 
   e.target.querySelectorAll(".svgCrcl").forEach(val=>{
     val.setAttribute("cx",`${e.offsetX}px`)

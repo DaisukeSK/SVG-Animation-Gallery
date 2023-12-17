@@ -58,18 +58,22 @@ typeButtons.forEach((val,key)=>{
     if(key==0){
   
       console.log("val",typeButtons[key])
+      // outputTXT[0].setAttribute("stroke","url(#img1)")
       outputTXT[0].setAttribute("stroke","LightSlateGrey")
       outputTXT[0].setAttribute("fill","none")
   
   
       outputTXT[1].setAttribute("stroke","url(#radial1)")
+      // outputTXT[1].setAttribute("fill","linear-gradient(blue,white,blue)")
       outputTXT[1].setAttribute("fill","linear-gradient(blue,white,blue)")
+      // outputTXT[1].setAttribute("fill","url(#img1)")
     }else if(key==1){
       console.log("val",typeButtons[key])
       outputTXT[0].setAttribute("stroke","navy")
       outputTXT[0].setAttribute("fill","none")
   
   
+      outputTXT[1].setAttribute("stroke","url(#img1)")
       outputTXT[1].setAttribute("stroke","white")
       outputTXT[1].setAttribute("fill","url(#grad_anime)")
     }else if(key==2){
