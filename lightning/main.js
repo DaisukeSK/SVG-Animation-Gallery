@@ -445,10 +445,14 @@ makeLightning(100+900*(1-amount.value), +centralize.value)
 
 const bgIntv=setInterval(()=>{
    const rand=Math.random()
+   const rand2=Math.random()
    // const rand=100
 
-   animate.setAttribute('values',`rgb(${Math.floor(rand*100)},${Math.floor(rand*100)},${Math.floor(rand*100)});black`)
+   if(rand2>=0.5){
 
-   animate.beginElement()
+      animate.setAttribute('values',`rgb(${Math.floor(rand*100)},${Math.floor(rand*100)},${Math.floor(rand*100)});black`)
+   
+      animate.beginElement()
+   }
    // console.log(document.querySelector("body"))
-},5000)
+},1000)
