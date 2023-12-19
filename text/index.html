@@ -13,9 +13,10 @@
     
 
     <div class="outputDiv">
-      <svg width="100%" height="100%">
+      <svg class="outputSVG" width="100%" height="100%">
 
         <defs>
+          
           <radialGradient id="radial1" cy="50%" gradientUnits="userSpaceOnUse">
             <stop style="stop-color:darkblue">
               <animate attributeName="offset" dur="3s" values="0;1" repeatCount="indefinite"/>
@@ -36,6 +37,7 @@
 
 
           <pattern id="grad_anime" width="100%" height="100%">
+            <!-- <pattern width="100%" height="100%"> -->
                 
             <rect x="0" width="100%" height="100%" fill="navy"/>
       <rect x="0" width="100%" height="1" fill="blue">
@@ -76,7 +78,7 @@
     
       
     
-
+    
       <!-- <circle class="svgCrcl" cx="-10px" cy="-150px" r="50" fill="url(#img1)"/> -->
 
 
@@ -122,6 +124,48 @@
         <rect x="0" y="78" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
         <rect x="0" y="82" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
 </pattern>
+
+
+<pattern id="testPtrn" width="100%" height="100%">
+  <rect x="0" y="0" width="100%" height="100%" fill="navy"/>
+  
+  
+  
+</pattern>
+<linearGradient id="grad_animeTest" x1="0%" y1="0%" x2="150%" y2="10%">
+  <stop style="stop-color:rgb(0, 0, 0);stop-opacity:1">
+  <animate class="grad" attributeName="offset" values="-1;1" animation-timing-function="linear" animation-fill-mode="both"/><!---->
+  </stop>
+  <stop style="stop-color:white;stop-opacity:1">
+    <animate class="grad" attributeName="offset" values="-0.55;1.45" animation-timing-function="linear" animation-fill-mode="both"/><!---->
+  </stop>
+  <stop style="stop-color:white;stop-opacity:1">
+    <animate class="grad" attributeName="offset" values="-0.5;1.5" animation-timing-function="linear" animation-fill-mode="both"/><!---->
+  </stop>
+  <stop style="stop-color:white;stop-opacity:1">
+  <animate class="grad" attributeName="offset" values="-0.45;1.55" animation-timing-function="linear" animation-fill-mode="both"/><!---->
+  </stop>
+  <stop style="stop-color:rgb(0, 0, 0);stop-opacity:1">
+    <animate class="grad" attributeName="offset" values="0;2" animation-timing-function="linear" animation-fill-mode="both"/><!---->
+    </stop>
+</linearGradient>
+
+<linearGradient id="metalicBG" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0" style="stop-color:rgb(0, 0, 0);stop-opacity:1"></stop>
+  <stop offset=".1" style="stop-color:rgb(133, 133, 133);stop-opacity:1"></stop>
+  <stop offset=".2" style="stop-color:rgb(88, 88, 88);stop-opacity:1"></stop>
+  <stop offset=".3" style="stop-color:white;stop-opacity:1"></stop>
+  <stop offset=".4" style="stop-color:rgb(29, 29, 29);stop-opacity:1"></stop>
+  <stop offset=".5" style="stop-color:rgb(150, 150, 150);stop-opacity:1"></stop>
+  <stop offset=".6" style="stop-color:rgb(82, 82, 82);stop-opacity:1"></stop>
+  <stop offset=".7" style="stop-color:rgb(230, 230, 230);stop-opacity:1"></stop>
+  <stop offset=".8" style="stop-color:rgb(99, 99, 99);stop-opacity:1"></stop>
+  <stop offset=".9" style="stop-color:white;stop-opacity:1"></stop>
+  <stop offset="1" style="stop-color:rgb(0, 0, 0);stop-opacity:1"></stop>
+</linearGradient>
+
+
+
         </defs>
 
         <text text-anchor="middle"
@@ -136,7 +180,10 @@
           style="font-weight: 900;
           font-style: italic;
           font-family: arial;
-          font-size: 5em;"></text>
+          font-size: 5em;">
+        
+          
+        </text>
 
      <text text-anchor="middle"
         x="50%"
@@ -152,6 +199,23 @@
           font-family: arial;
           font-size: 5em;"></text>
 
+          <!-- <text text-anchor="middle"
+        x="50%"
+        y="50%" 
+        dy=".25em"
+        display="none"
+        class="outputTXT"
+          fill="url(#grad_anime)"
+          stroke="red"
+          stroke-width="3"
+          
+          style="font-weight: 900;
+          font-style: italic;
+          font-family: arial;
+          font-size: 5em;
+          
+          "></text> -->
+
     <!-- <text class="txt2" x="20" y="40" stroke="navy" stroke-width="7"
             style='font-size:3em;
             font-family: arial;
@@ -163,7 +227,17 @@
             font-style:italic;'>LEVEL DOWN</text> -->
 
             <text class="initText" x="50%" y="50%" font-size="25">Type something below...</text>
-
+            <animateTransform
+            fill="freeze"
+            class="zoomOut"
+            attributeName="transform" 
+        type="scale" 
+        
+        dur="1s" 
+        
+        
+        />
+        <animate class="opacityAnimate" attributeName="opacity" dur="1s"/>
       </svg>
     </div>
 
@@ -172,6 +246,9 @@
       <button class="type">Type1</button>
       <button class="type">Type2</button>
       <button class="type">Type3</button>
+      <button class="type">Type4</button>
+      <!-- <button class="type">Type5</button>
+      <button class="type">Type6</button> -->
 
     </div>
     <input class="Input" type="text" placeholder="Type something..."/>

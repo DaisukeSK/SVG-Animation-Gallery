@@ -1,10 +1,14 @@
 
 
 const outputTXT=document.querySelectorAll(".outputTXT")
+const outputSVG=document.querySelectorAll(".outputSVG")
 // const txt2=document.querySelectorAll(".txt2")
 const Input=document.querySelector(".Input")
 const typeButtons=document.querySelectorAll("button.type")
 const initText = document.querySelector(".initText")
+const zoomOut = document.querySelector(".zoomOut")
+const opacityAnimate = document.querySelector(".opacityAnimate")
+const grad = document.querySelectorAll(".grad")
 // const levelDiv=document.querySelector(".level")
 // const levelNumber=document.querySelector(".level .levelNumber")
 // const question=document.querySelector(".question")
@@ -37,10 +41,12 @@ Input.oninput=(e)=>{
   
   outputTXT[0].setAttribute("display","block")
   outputTXT[1].setAttribute("display","block")
+  // outputTXT[2].setAttribute("display","block")
 
   console.log(e.target.value)
   outputTXT[0].innerHTML=e.target.value
   outputTXT[1].innerHTML=e.target.value
+  // outputTXT[2].innerHTML=e.target.value
 
 
   if(e.target.value==""){
@@ -52,8 +58,12 @@ Input.oninput=(e)=>{
 
 typeButtons.forEach((val,key)=>{
 
+  
   val.onclick=()=>{
 
+    
+    
+    // outputSVG.style.backgroundColor="none"
 
     if(key==0){
   
@@ -84,6 +94,29 @@ typeButtons.forEach((val,key)=>{
   
       outputTXT[1].setAttribute("stroke","lightgreen")
       outputTXT[1].setAttribute("fill","url(#greengrid)")
+    }else if(key==3){
+      zoomOut.setAttribute("values","5,5; 1,1;" );
+      zoomOut.beginElement()
+
+      opacityAnimate.setAttribute("values","0;1" );
+      opacityAnimate.beginElement()
+      console.log(outputSVG)
+      // outputSVG.style.backgroundColor="black"
+      console.log("val",typeButtons[key])
+      outputTXT[0].setAttribute("stroke","url(#metalicBG)")
+      outputTXT[0].setAttribute("fill","none")
+  
+  
+      outputTXT[1].setAttribute("stroke","white")
+      outputTXT[1].setAttribute("fill","url(#grad_animeTest)")
+
+      setTimeout(()=>{
+
+        grad.forEach(val=>{
+          val.setAttribute("dur","1s")
+          val.beginElement()
+        })
+      },1300)
     }
   }
 })
