@@ -33,29 +33,29 @@ fetch("./terms.json")
 
   terms={...data}
 }).then(()=>{
-  console.log("terms",terms)
+  // console.log("terms",terms)
 
   counter.innerText=0
 
-  let answer=false
+  let correctAnswer=false
   let count=0
   let level=1
   levelNumber.innerText=level
 
   svgForBorder.setAttribute("fill",svgBorderBG[level-1])
-  console.log("fill1",svgBorderBG[level-1])
-  console.log("attr",svgForBorder.getAttribute("fill"))
+  // console.log("fill1",svgBorderBG[level-1])
+  // console.log("attr",svgForBorder.getAttribute("fill"))
 
   
   ////////////////////// Function //////////////////////
   const showQuestion=()=>{
-    console.log("fill1",svgBorderBG[level-1])
-  console.log("attr",svgForBorder.getAttribute("fill"))
+    // console.log("fill1",svgBorderBG[level-1])
+    // console.log("attr",svgForBorder.getAttribute("fill"))
     // animate.forEach(val=>{
     //   val.setAttribute("attributeName","offset")
     //   console.log(val.getAttribute("dur"))
     // })
-    answer=false
+    correctAnswer=false
     levelDown.style.display="none"
     levelUp.style.display="none"
     // levelUp.querySelectorAll("animate").forEach(val=>{val.beginElement()})
@@ -82,10 +82,12 @@ fetch("./terms.json")
     const rand=Math.floor(Math.random()*terms[level].length)
     console.log("rand",rand)
     question.innerText=terms[level][rand]
+
+
     input.oninput=(e)=>{
       if(e.target.value==question.innerText){
         
-        answer=true
+        correctAnswer=true
         // rslt.innerText="Right"
         count++
         
@@ -129,7 +131,7 @@ fetch("./terms.json")
       
       if(i==0){
         console.log("rslt.innerText",rslt)
-        if(!answer){
+        if(!correctAnswer){
           // container.style.backgroundColor="pink"
           if(level>1){
 

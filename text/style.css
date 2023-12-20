@@ -1,10 +1,14 @@
-.outputDiv {
+body {
+  overflow: hidden;
+  margin-top: 100px;
+}
+body .outputDiv {
   height: 150px;
 }
-.outputDiv svg {
+body .outputDiv svg {
   overflow: visible;
 }
-.outputDiv svg .initText {
+body .outputDiv svg .initText {
   animation-name: blink;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -21,19 +25,17 @@
     opacity: 1;
   }
 }
-
-.buttonHolder {
+body .buttonHolder {
   width: 500px;
   height: 50px;
   background-color: darkseagreen;
   margin: 0 auto;
   padding-top: 3px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
-
-.Input {
+body .Input {
   margin: 20px auto;
   display: block;
 }/*# sourceMappingURL=style.css.map */

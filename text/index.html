@@ -1,255 +1,206 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <title>Text Styles</title>
-
   </head>
+
   <body>
 
-    
-
     <div class="outputDiv">
-      <svg class="outputSVG" width="100%" height="100%">
+
+      <svg width="100%" height="100%">
 
         <defs>
           
-          <radialGradient id="radial1" cy="50%" gradientUnits="userSpaceOnUse">
+          <radialGradient id="blueRadial" cy="50%" gradientUnits="userSpaceOnUse">
             <stop style="stop-color:darkblue">
               <animate attributeName="offset" dur="3s" values="0;1" repeatCount="indefinite"/>
-          </stop>
+            </stop>
             <stop style="stop-color:cyan">
               <animate attributeName="offset" dur="3s" values="0;1.7" repeatCount="indefinite"/>
-        </stop>
+            </stop>
             <stop style="stop-color:white">
-            <animate attributeName="offset" dur="3s" values="0;2.2" repeatCount="indefinite"/>
-          </stop>
-              <stop style="stop-color:cyan">
-                <animate attributeName="offset" dur="3s" values="0;2.5" repeatCount="indefinite"/>
-          </stop>
+              <animate attributeName="offset" dur="3s" values="0;2.2" repeatCount="indefinite"/>
+            </stop>
+            <stop style="stop-color:cyan">
+              <animate attributeName="offset" dur="3s" values="0;2.5" repeatCount="indefinite"/>
+            </stop>
             <stop style="stop-color:darkblue">
               <animate attributeName="offset" dur="3s" values="0;2.7" repeatCount="indefinite"/>
-          </stop>
+            </stop>
           </radialGradient>
 
 
-          <pattern id="grad_anime" width="100%" height="100%">
-            <!-- <pattern width="100%" height="100%"> -->
-                
+          <pattern id="blueLines" width="100%" height="100%">
             <rect x="0" width="100%" height="100%" fill="navy"/>
-      <rect x="0" width="100%" height="1" fill="blue">
-          <animate attributeName="y" values="25;100;20;100" dur="1s" repeatCount="indefinite">
+            <rect x="0" width="100%" height="1" fill="dodgerBlue">
+              <animate attributeName="y" values="25;100;20;100" dur="3s" repeatCount="indefinite">
             </rect>
-        <rect x="0" width="100%" height="1" fill="blue">
-          <animate attributeName="y" values="3;70;50;110;8" dur="5s" repeatCount="indefinite">
-        </rect>
-          
-          <rect x="0" width="100%" height="2" fill="white">
-          <animate attributeName="y" values="53;60;110;70;48;90" dur="5s" repeatCount="indefinite">
-        </rect>
-          
-          <rect x="0" width="100%" height="2" fill="blue">
-          <animate attributeName="y" values="13;50;33;70;100" dur="3s" repeatCount="indefinite">
-        </rect>
-          
-          <rect x="0" width="100%" height="3" fill="blue">
-          <animate attributeName="y" values="111;45;10;50;10;110" dur="1s" repeatCount="indefinite">
-        </rect>
-          
-          <rect x="0" width="100%" height="4" fill="blue">
-          <animate attributeName="y" values="67;110;30;50;80" dur="2s" repeatCount="indefinite">
-        </rect>
-            
+            <rect x="0" width="100%" height="1" fill="blue">
+              <animate attributeName="y" values="3;70;50;110;8" dur="5s" repeatCount="indefinite">
+            </rect>
             <rect x="0" width="100%" height="2" fill="white">
-          <animate attributeName="y" values="33;75;110;40;112;20" dur="5s" repeatCount="indefinite">
-        </rect>
-              <rect x="0" width="100%" height="2" fill="dodgerBlue">
-          <animate attributeName="y" values="13;55;30;90;52;10;100" dur="3s" repeatCount="indefinite">
-        </rect>
-            
-        <rect x="0" width="100%" height="5" fill="blue">
-          <animate attributeName="y" values="15;100;50;20;77;110" dur="3s" repeatCount="indefinite">
-        </rect>
-        <rect x="0" width="100%" height="1" fill="white">
-          <animate attributeName="y" values="29;1;90;23;111;45;2;11" dur="3s" repeatCount="indefinite">
-        </rect>
+              <animate attributeName="y" values="53;60;110;70;48;90" dur="5s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="2" fill="blue">
+              <animate attributeName="y" values="13;50;33;70;100" dur="3s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="3" fill="dodgerBlue">
+              <animate attributeName="y" values="111;45;10;50;10;110" dur="2s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="4" fill="blue">
+              <animate attributeName="y" values="67;110;30;50;80" dur="2s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="2" fill="white">
+              <animate attributeName="y" values="33;75;110;40;112;20" dur="5s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="2" fill="dodgerBlue">
+              <animate attributeName="y" values="13;55;30;90;52;10;100" dur="3s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="5" fill="blue">
+              <animate attributeName="y" values="15;100;50;20;77;110" dur="3s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="1" fill="white">
+              <animate attributeName="y" values="29;1;90;23;111;45;2;11" dur="3s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="2" fill="darkcyan">
+              <animate attributeName="y" values="21;56;80;31;77;111" dur="3s" repeatCount="indefinite">
+            </rect>
+            <rect x="0" width="100%" height="2" fill="dodgerBlue">
+              <animate attributeName="y" values="110;31;78;90;" dur="3s" repeatCount="indefinite">
+            </rect>
+          </pattern>
 
-        <rect x="0" width="100%" height="2" fill="darkcyan">
-          <animate attributeName="y" values="21;56;80;31;77;111" dur="3s" repeatCount="indefinite">
-        </rect>
 
-        <rect x="0" width="100%" height="2" fill="dodgerBlue">
-          <animate attributeName="y" values="110;31;78;90;" dur="3s" repeatCount="indefinite">
-        </rect>
-    </pattern>
-
-    
-      
-    
-    
-      <!-- <circle class="svgCrcl" cx="-10px" cy="-150px" r="50" fill="url(#img1)"/> -->
-
-
-
-    <linearGradient id="green" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop style="stop-color:#001F01;">
-        <animate attributeName="offset" values="-1;1" dur="3s" repeatCount="indefinite">
-      </stop>
-        <stop style="stop-color:green;">
-        <animate attributeName="offset" values="-0.6;1.4" dur="3s" repeatCount="indefinite">
-      </stop>
-      <stop style="stop-color:#00F604;">
-        <animate attributeName="offset" values="-0.3;1.7" dur="3s" repeatCount="indefinite">
-      </stop>
-        
+          <linearGradient id="greenLight" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop style="stop-color:#001F01;">
+              <animate attributeName="offset" values="-1;1" dur="3s" repeatCount="indefinite">
+            </stop>
+            <stop style="stop-color:green;">
+              <animate attributeName="offset" values="-0.6;1.4" dur="3s" repeatCount="indefinite">
+            </stop>
+            <stop style="stop-color:#00F604;">
+              <animate attributeName="offset" values="-0.3;1.7" dur="3s" repeatCount="indefinite">
+            </stop>
             <stop style="stop-color:white;">
-        <animate attributeName="offset" values="-0.05;1.95" dur="3s" repeatCount="indefinite">
-      </stop>
-      <stop style="stop-color:#001F01;">
-        <animate attributeName="offset" values="0;2" dur="3s" repeatCount="indefinite">
-      </stop>
-    </linearGradient>
+              <animate attributeName="offset" values="-0.05;1.95" dur="3s" repeatCount="indefinite">
+            </stop>
+            <stop style="stop-color:#001F01;">
+              <animate attributeName="offset" values="0;2" dur="3s" repeatCount="indefinite">
+            </stop>
+          </linearGradient>
     
-    <pattern id="greengrid" width="100%" height="100%">
-          
-<!--             <rect x="0" width="100%" height="100%" fill="navy"/> -->
-
-      
-        
-        
-        <rect x="0" y="30" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="34" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="38" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="42" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="46" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="50" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="54" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="58" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="62" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="66" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="70" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="74" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="78" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-        <rect x="0" y="82" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
-</pattern>
+          <pattern id="greenGrid" width="100%" height="100%">
+            <rect x="0" y="30" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="34" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="38" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="42" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="46" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="50" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="54" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="58" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="62" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="66" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="70" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="74" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="78" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+            <rect x="0" y="82" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
+          </pattern>
 
 
-<pattern id="testPtrn" width="100%" height="100%">
-  <rect x="0" y="0" width="100%" height="100%" fill="navy"/>
-  
-  
-  
-</pattern>
-<linearGradient id="grad_animeTest" x1="0%" y1="0%" x2="150%" y2="10%">
-  <stop style="stop-color:rgb(0, 0, 0);stop-opacity:1">
-  <animate class="grad" attributeName="offset" values="-1;1" animation-timing-function="linear" animation-fill-mode="both"/><!---->
-  </stop>
-  <stop style="stop-color:white;stop-opacity:1">
-    <animate class="grad" attributeName="offset" values="-0.55;1.45" animation-timing-function="linear" animation-fill-mode="both"/><!---->
-  </stop>
-  <stop style="stop-color:white;stop-opacity:1">
-    <animate class="grad" attributeName="offset" values="-0.5;1.5" animation-timing-function="linear" animation-fill-mode="both"/><!---->
-  </stop>
-  <stop style="stop-color:white;stop-opacity:1">
-  <animate class="grad" attributeName="offset" values="-0.45;1.55" animation-timing-function="linear" animation-fill-mode="both"/><!---->
-  </stop>
-  <stop style="stop-color:rgb(0, 0, 0);stop-opacity:1">
-    <animate class="grad" attributeName="offset" values="0;2" animation-timing-function="linear" animation-fill-mode="both"/><!---->
-    </stop>
-</linearGradient>
+          <linearGradient id="blackGrad" x1="0%" y1="0%" x2="150%" y2="30%">
+            <stop style="stop-color:black;">
+              <animate class="blackGradAnm" attributeName="offset" values="-1;1" animation-timing-function="linear"/>
+            </stop>
+            <stop style="stop-color:rgb(55, 55, 55);">
+              <animate class="blackGradAnm" attributeName="offset" values="-0.6;1.4" animation-timing-function="linear"/>
+            </stop>
+            <stop style="stop-color:white;">
+              <animate class="blackGradAnm" attributeName="offset" values="-0.5;1.5" animation-timing-function="linear"/>
+            </stop>
+            <stop style="stop-color:rgb(55, 55, 55);">
+              <animate class="blackGradAnm" attributeName="offset" values="-0.4;1.6" animation-timing-function="linear"/>
+            </stop>
+            <stop style="stop-color:black;">
+              <animate class="blackGradAnm" attributeName="offset" values="0;2" animation-timing-function="linear"/>
+            </stop>
+          </linearGradient>
 
-<linearGradient id="metalicBG" x1="0%" y1="0%" x2="100%" y2="100%">
-  <stop offset="0" style="stop-color:rgb(0, 0, 0);stop-opacity:1"></stop>
-  <stop offset=".1" style="stop-color:rgb(133, 133, 133);stop-opacity:1"></stop>
-  <stop offset=".2" style="stop-color:rgb(88, 88, 88);stop-opacity:1"></stop>
-  <stop offset=".3" style="stop-color:white;stop-opacity:1"></stop>
-  <stop offset=".4" style="stop-color:rgb(29, 29, 29);stop-opacity:1"></stop>
-  <stop offset=".5" style="stop-color:rgb(150, 150, 150);stop-opacity:1"></stop>
-  <stop offset=".6" style="stop-color:rgb(82, 82, 82);stop-opacity:1"></stop>
-  <stop offset=".7" style="stop-color:rgb(230, 230, 230);stop-opacity:1"></stop>
-  <stop offset=".8" style="stop-color:rgb(99, 99, 99);stop-opacity:1"></stop>
-  <stop offset=".9" style="stop-color:white;stop-opacity:1"></stop>
-  <stop offset="1" style="stop-color:rgb(0, 0, 0);stop-opacity:1"></stop>
-</linearGradient>
-
-
+          <linearGradient id="metalicBG" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0" style="stop-color:rgb(0, 0, 0);"></stop>
+            <stop offset=".1" style="stop-color:rgb(133, 133, 133);"></stop>
+            <stop offset=".15" style="stop-color:rgb(7, 7, 7);"></stop>
+            <stop offset=".2" style="stop-color:rgb(88, 88, 88);"></stop>
+            <stop offset=".3" style="stop-color:white;"></stop>
+            <stop offset=".33" style="stop-color:rgb(29, 29, 29);"></stop>
+            <stop offset=".36" style="stop-color:white;"></stop>
+            <stop offset=".4" style="stop-color:rgb(29, 29, 29);"></stop>
+            <stop offset=".5" style="stop-color:rgb(150, 150, 150);"></stop>
+            <stop offset=".6" style="stop-color:rgb(22, 22, 22);"></stop>
+            <stop offset=".63" style="stop-color:rgb(255, 255, 255);"></stop>
+            <stop offset=".66" style="stop-color:rgb(22, 22, 22);"></stop>
+            <stop offset=".7" style="stop-color:rgb(230, 230, 230);"></stop>
+            <stop offset=".75" style="stop-color:rgb(7, 7, 7);"></stop>
+            <stop offset=".8" style="stop-color:rgb(99, 99, 99);"></stop>
+            <stop offset=".83" style="stop-color:rgb(224, 224, 224);"></stop>
+            <stop offset=".86" style="stop-color:rgb(32, 32, 32);"></stop>
+            <stop offset=".9" style="stop-color:white;"></stop>
+            <stop offset="1" style="stop-color:rgb(0, 0, 0);"></stop>
+          </linearGradient>
 
         </defs>
 
-        <text text-anchor="middle"
-        x="50%"
-        y="50%" 
-        dy=".25em"
-        display="none"
-        class="outputTXT"
+        <text
+          text-anchor="middle"
+          x="50%"
+          y="50%" 
+          dy=".25em"
+          display="none"
+          class="outputTXT"
           fill="none"
           stroke="navy"
           stroke-width="9"
-          style="font-weight: 900;
-          font-style: italic;
-          font-family: arial;
-          font-size: 5em;">
-        
-          
+          style="
+            font-weight: 900;
+            font-style: italic;
+            font-family: arial;
+            font-size: 5em;
+          ">
         </text>
 
-     <text text-anchor="middle"
-        x="50%"
-        y="50%" 
-        dy=".25em"
-        display="none"
-        class="outputTXT"
-          fill="url(#grad_anime)"
+        <text
+          text-anchor="middle"
+          x="50%"
+          y="50%" 
+          dy=".25em"
+          display="none"
+          class="outputTXT"
+          fill="url(#blueLines)"
           stroke="white"
           stroke-width="3"
-          style="font-weight: 900;
-          font-style: italic;
-          font-family: arial;
-          font-size: 5em;"></text>
-
-          <!-- <text text-anchor="middle"
-        x="50%"
-        y="50%" 
-        dy=".25em"
-        display="none"
-        class="outputTXT"
-          fill="url(#grad_anime)"
-          stroke="red"
-          stroke-width="3"
-          
-          style="font-weight: 900;
-          font-style: italic;
-          font-family: arial;
-          font-size: 5em;
-          
-          "></text> -->
-
-    <!-- <text class="txt2" x="20" y="40" stroke="navy" stroke-width="7"
-            style='font-size:3em;
+          style="
+            font-weight: 900;
+            font-style: italic;
             font-family: arial;
-            font-weight:900;
-            font-style:italic;'>LEVEL DOWN</text>
-    <text class="txt2" x="20" y="40" stroke="white" fill="url(#grad_anime)" stroke-width="3"style='font-size:3em;
-            font-family: arial;
-            font-weight:900;
-            font-style:italic;'>LEVEL DOWN</text> -->
+            font-size: 5em;
+          ">
+        </text>
 
-            <text class="initText" x="50%" y="50%" font-size="25">Type something below...</text>
-            <animateTransform
-            fill="freeze"
-            class="zoomOut"
-            attributeName="transform" 
-        type="scale" 
-        
-        dur="1s" 
-        
-        
+        <text class="initText" x="50%" y="50%" font-size="25">Type something below...</text>
+
+        <animateTransform
+          class="zoomOut"
+          attributeName="transform" 
+          type="scale" 
+          dur="1s"
         />
         <animate class="opacityAnimate" attributeName="opacity" dur="1s"/>
+
       </svg>
+
     </div>
 
     <div class="buttonHolder">
@@ -262,10 +213,9 @@
       <button class="type">Type6</button> -->
 
     </div>
+
     <input class="Input" type="text" placeholder="Type something..."/>
 
-    
-    
     <script src="main.js"></script>
   </body>
 </html>

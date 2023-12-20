@@ -6,6 +6,28 @@ body {
   height: 100vh;
 }
 
+.growingCircle {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.growingCircle svg {
+  transform: rotate(-90deg);
+}
+.growingCircle .middleInCircle {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  text-align: center;
+}
+.growingCircle .middleInCircle .count3 {
+  font-weight: bold;
+}
+
 .initBox {
   width: -moz-fit-content;
   width: fit-content;
@@ -27,28 +49,6 @@ body {
   border-radius: 10px;
   text-align: center;
   margin: 10px auto 0;
-}
-
-.growingCircle {
-  position: absolute;
-  top: 170px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-}
-.growingCircle .middleInCircle {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.4em;
-  text-align: center;
-}
-.growingCircle .middleInCircle .count3 {
-  font-weight: bold;
-}
-.growingCircle svg {
-  transform: rotate(-90deg);
 }
 
 .container {
