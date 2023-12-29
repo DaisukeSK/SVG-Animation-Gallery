@@ -10,7 +10,7 @@ body {
             .initText {
                 // position: absolute;
                 // left: 50%;
-                // transform: translateX(-100px);
+                // transform: translateX(-50%);
                 // display: block;
                 // margin-right: 50px;
                 @keyframes blink{
@@ -36,7 +36,7 @@ body {
         align-items: center;
     }
     
-    .Input {
+    input[type="text"] {
         margin: 20px auto;
         display: block;
     }

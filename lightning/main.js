@@ -375,7 +375,7 @@
 //     sodipodi:nodetypes='cccccccccccccccccccccccccccccccc' />
 // </g>
 // </svg>`
-const lightningDiv=document.querySelector("#lightning");
+const body=document.querySelector("body");
 const animate=document.querySelector("animate");
 const centralize=document.querySelector('input[name="centralize"]');
 const amount=document.querySelector('input[name="amount"]');
@@ -439,22 +439,22 @@ const makeLightning=(sec, center)=>{
       lightningsSVGs[5];
       
       
-      lightningDiv.insertAdjacentHTML("afterbegin",LL);
+      body.insertAdjacentHTML("afterbegin",LL);
       // console.log(lightningDiv.firstChild)
-      lightningDiv.firstChild.onanimationend=(e)=>e.target.remove();
+      body.firstChild.onanimationend=(e)=>e.target.remove();
       
       // lightningDiv.firstChild.style.left=`${rand*100}%`;
       
       // console.log("%%",+center + (50-center)*2*rand)
       // lightningDiv.firstChild.style.left=`50%`;
 
-      lightningDiv.firstChild.style.left=`${+center/2 + (100-center)*1*rand}%`;
+      body.firstChild.style.left=`${+center/2 + (100-center)*1*rand}%`;
 
    
-      lightningDiv.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`;
-      lightningDiv.firstChild.style.animationDelay=`${rand*3}s`;
+      body.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`;
+      body.firstChild.style.animationDelay=`${rand*3}s`;
       
-      console.log("Children",lightningDiv.childNodes.length)
+      console.log("Children",body.childNodes.length)
       
    
    },sec);

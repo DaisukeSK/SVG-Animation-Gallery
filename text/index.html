@@ -15,7 +15,7 @@
 
         <defs>
           
-          <radialGradient id="blueRadial" cy="50%" gradientUnits="userSpaceOnUse">
+          <radialGradient id="type1_1" cy="50%" gradientUnits="userSpaceOnUse">
             <stop style="stop-color:darkblue">
               <animate attributeName="offset" dur="3s" values="0;1" repeatCount="indefinite"/>
             </stop>
@@ -33,8 +33,26 @@
             </stop>
           </radialGradient>
 
+          <radialGradient id="type1_2" cy="50%" gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:rgb(0, 0, 0)">
+              <animate attributeName="offset" dur="3s" values="0;1" repeatCount="indefinite"/>
+            </stop>
+            <stop style="stop-color:navy">
+              <animate attributeName="offset" dur="3s" values="0;1.7" repeatCount="indefinite"/>
+            </stop>
+            <stop style="stop-color:white">
+              <animate attributeName="offset" dur="3s" values="0;2.2" repeatCount="indefinite"/>
+            </stop>
+            <stop style="stop-color:cyan">
+              <animate attributeName="offset" dur="3s" values="0;2.5" repeatCount="indefinite"/>
+            </stop>
+            <stop style="stop-color:rgb(0, 0, 0)">
+              <animate attributeName="offset" dur="3s" values="0;2.7" repeatCount="indefinite"/>
+            </stop>
+          </radialGradient>
 
-          <pattern id="blueLines" width="100%" height="100%">
+
+          <pattern id="type2_1" width="100%" height="100%">
             <rect x="0" width="100%" height="100%" fill="navy"/>
             <rect x="0" width="100%" height="1" fill="dodgerBlue">
               <animate attributeName="y" values="25;100;20;100" dur="3s" repeatCount="indefinite">
@@ -75,7 +93,7 @@
           </pattern>
 
 
-          <linearGradient id="greenLight" x1="0%" y1="100%" x2="0%" y2="0%">
+          <linearGradient id="type3_1" x1="0%" y1="100%" x2="0%" y2="0%">
             <stop style="stop-color:#001F01;">
               <animate attributeName="offset" values="-1;1" dur="3s" repeatCount="indefinite">
             </stop>
@@ -93,7 +111,7 @@
             </stop>
           </linearGradient>
     
-          <pattern id="greenGrid" width="100%" height="100%">
+          <pattern id="type3_2" width="100%" height="100%">
             <rect x="0" y="30" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
             <rect x="0" y="34" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
             <rect x="0" y="38" width="100%" height="2" fill="hsla(122, 100%, 30%, 0.3)"/>
@@ -111,7 +129,7 @@
           </pattern>
 
 
-          <linearGradient id="blackGrad" x1="0%" y1="0%" x2="150%" y2="30%">
+          <linearGradient id="type4_1" x1="0%" y1="0%" x2="150%" y2="30%">
             <stop style="stop-color:black;">
               <animate class="blackGradAnm" attributeName="offset" values="-1;1" animation-timing-function="linear"/>
             </stop>
@@ -129,7 +147,7 @@
             </stop>
           </linearGradient>
 
-          <linearGradient id="metalicBG" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="type4_2" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0" style="stop-color:rgb(0, 0, 0);"></stop>
             <stop offset=".1" style="stop-color:rgb(133, 133, 133);"></stop>
             <stop offset=".15" style="stop-color:rgb(7, 7, 7);"></stop>
@@ -158,7 +176,7 @@
           x="50%"
           y="50%" 
           dy=".25em"
-          display="none"
+          
           class="outputTXT"
           fill="none"
           stroke="navy"
@@ -176,9 +194,9 @@
           x="50%"
           y="50%" 
           dy=".25em"
-          display="none"
+          
           class="outputTXT"
-          fill="url(#blueLines)"
+          fill="url(#type2_1)"
           stroke="white"
           stroke-width="3"
           style="
@@ -214,7 +232,7 @@
 
     </div>
 
-    <input class="Input" type="text" placeholder="Type something..."/>
+    <input type="text" placeholder="Type something..."/>
 
     <script src="main.js"></script>
   </body>

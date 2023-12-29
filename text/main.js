@@ -1,7 +1,7 @@
 
 const outputTXT=document.querySelectorAll(".outputTXT")
 
-const Input=document.querySelector(".Input")
+const Input=document.querySelector('input[type="text"]')
 const typeButtons=document.querySelectorAll("button.type")
 const initText = document.querySelector(".initText")
 
@@ -13,14 +13,22 @@ initText.style.transform=`translateX(-${initText.getBoundingClientRect().width/2
 
 Input.oninput=(e)=>{
 
-  initText.setAttribute("display","none")
+  // initText.setAttribute("display","none")
 
-  outputTXT.forEach(txt=>{
-    txt.setAttribute("display","block")
-    txt.innerHTML=e.target.value
-  })
+  // outputTXT.forEach(txt=>
+    
+  //   txt.innerHTML=e.target.value
+  // )
   
-  e.target.value=="" && initText.setAttribute("display","block")
+  // e.target.value=="" && initText.setAttribute("display","block")
+  e.target.value=="" ?
+  initText.setAttribute("display","block"):
+  initText.setAttribute("display","none")
+  outputTXT.forEach(txt=>
+    
+    txt.innerHTML=e.target.value
+  );
+  
 }
 
 typeButtons.forEach((bttn,key)=>{
@@ -31,22 +39,22 @@ typeButtons.forEach((bttn,key)=>{
       outputTXT[0].setAttribute("stroke","LightSlateGrey")
       outputTXT[0].setAttribute("fill","none")
   
-      outputTXT[1].setAttribute("stroke","url(#blueRadial)")
-      outputTXT[1].setAttribute("fill","linear-gradient(blue,white,blue)")
+      outputTXT[1].setAttribute("stroke","url(#type1_1)")
+      outputTXT[1].setAttribute("fill","url(#type1_2)")
 
     }else if(key==1){
       outputTXT[0].setAttribute("stroke","navy")
       outputTXT[0].setAttribute("fill","none")
   
       outputTXT[1].setAttribute("stroke","white")
-      outputTXT[1].setAttribute("fill","url(#blueLines)")
+      outputTXT[1].setAttribute("fill","url(#type2_1)")
 
     }else if(key==2){
       outputTXT[0].setAttribute("stroke","green")
-      outputTXT[0].setAttribute("fill","url(#greenLight)")
+      outputTXT[0].setAttribute("fill","url(#type3_1)")
   
       outputTXT[1].setAttribute("stroke","lightgreen")
-      outputTXT[1].setAttribute("fill","url(#greenGrid)")
+      outputTXT[1].setAttribute("fill","url(#type3_2)")
 
     }else if(key==3){
       zoomOut.setAttribute("values","5,5; 1,1;" );
@@ -58,8 +66,8 @@ typeButtons.forEach((bttn,key)=>{
       outputTXT[0].setAttribute("stroke","#cccccc")
       outputTXT[0].setAttribute("fill","none")
   
-      outputTXT[1].setAttribute("stroke","url(#metalicBG)")
-      outputTXT[1].setAttribute("fill","url(#blackGrad)")
+      outputTXT[1].setAttribute("stroke","url(#type4_2)")
+      outputTXT[1].setAttribute("fill","url(#type4_1)")
 
       setTimeout(()=>{
 

@@ -1,8 +1,8 @@
 
 const colorsArray =[
     {1:"cyan", 2:"lightblue", 3:"blue", bg:'rgba(0, 0, 255, 0.5)'},
-    {1:"orange", 2:"red", 3:"yellow", bg:'rgba(255, 0, 0, 0.5)'},
-    {1:"green", 2:"lightgreen", 3:"chartreuse", bg:'rgba(0, 128, 0, 0.5)'}
+    {1:"orange", 2:"yellow", 3:"red", bg:'rgba(255, 0, 0, 0.5)'},
+    {1:"chartreuse", 2:"lightgreen", 3:"green", bg:'rgba(0, 128, 0, 0.5)'}
 ];
 
 const styleTransform =[
@@ -19,6 +19,8 @@ const outlineStyle='3px solid white';
 
 const colorButtons=document.querySelectorAll(".color1, .color2, .color3");
 const shapeButtons=document.querySelectorAll(".shape1, .shape2, .shape3");
+
+
 
 const typeChange=(num, color, width)=>{
 
@@ -47,7 +49,11 @@ const makeCircle=()=>{
     const rand=Math.ceil(Math.random()*3);
 
     const svg= 
-    `<svg width=${diameter} height=${diameter}
+    `<svg class="shapeSVG" width=${diameter} height=${diameter}
+    onanimationend='((e)=>{
+        console.log("remove");
+        e.target.remove();
+    })(event)'
         style="top:${xx}%; left:${yy}%; animation-duration: ${glow}s; animation-delay: ${delay}s;
         transform:${styleTransform[type]};">`+
 
@@ -55,8 +61,9 @@ const makeCircle=()=>{
 
     '</svg>';
 
-    document.querySelector(".circle").insertAdjacentHTML("afterbegin", svg);
-    document.querySelector(".circle svg").onanimationend=(e)=>e.target.remove();
+    // document.querySelector(".svgContainer").insertAdjacentHTML("afterbegin", svg);
+    document.querySelector("body").insertAdjacentHTML("afterbegin", svg);
+    // document.querySelector(".shapeSVG").onanimationend=(e)=>e.target.remove();
 };
 
 const bgChange=(number)=>{
@@ -84,7 +91,7 @@ colorButtons.forEach((val,key)=>{
 
         bgChange(color);
         
-        document.querySelectorAll(".circle svg").forEach(svg=>{
+        document.querySelectorAll(".shapeSVG").forEach(svg=>{
             const rand=Math.ceil(Math.random()*3)
             
             svg.firstChild.tagName=="path"?
@@ -111,7 +118,7 @@ shapeButtons.forEach((val,key)=>{
         e.target.closest("div").style.boxShadow= boxShadowStyle;
         e.target.closest("div").style.pointerEvents= 'none';
         
-        document.querySelectorAll(".circle svg").forEach(svg=>{
+        document.querySelectorAll(".shapeSVG").forEach(svg=>{
             
             svg.style.transform=styleTransform[key];
             let fill=svg.firstChild.getAttribute("fill")!=="none"?
@@ -149,11 +156,12 @@ window.onload=()=>{
         makeCircle();
     };
 
-    document.querySelectorAll(".circle svg").forEach(val=>{
+    document.querySelectorAll(".shapeSVG").forEach(val=>{
         val.style.animationIterationCount=4;
     });
 
     setInterval(()=>{
         makeCircle();
+        console.log("length",document.querySelectorAll(".shapeSVG").length)
     },2000);
 };

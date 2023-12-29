@@ -12,21 +12,15 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-.grid #trace {
+.grid #intr1 {
   position: relative;
   width: 100%;
-  background: linear-gradient(rgba(0, 255, 150, 0.3), white, rgba(0, 255, 150, 0.3));
+  height: 100%;
+  background: linear-gradient(rgba(0, 255, 150, 0.7), white, rgba(0, 183, 255, 0.7));
   overflow: hidden;
 }
-.grid #trace .front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.grid #trace .child {
+.grid #intr1 .child {
+  pointer-events: none;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -63,115 +57,109 @@ body {
     background-color: RoyalBlue;
   }
 }
-.grid #cross {
+.grid #intr2 {
   position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("../img/night.png");
+  background-size: cover;
+  background-position: bottom;
   overflow: hidden;
 }
-.grid #cross .front {
+.grid #intr2 img {
+  min-width: 100%;
+  min-height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 1;
 }
-.grid #cross .ver {
+.grid #intr2 .ver, .grid #intr2 .hori {
+  pointer-events: none;
   position: absolute;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+.grid #intr2 .ver {
   top: 0;
   width: 1px;
   height: 100%;
   transform: translateX(-50%);
   animation-name: slit;
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
 }
 @keyframes slit {
-  0% {
+  from {
     width: 1px;
     opacity: 1;
     background-color: rgb(255, 255, 255);
   }
-  100% {
+  to {
     width: 50px;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
   }
 }
-.grid #cross .hori {
-  position: absolute;
+.grid #intr2 .hori {
   left: 0;
   height: 1px;
   width: 100%;
   transform: translateY(-50%);
   animation-name: slit2;
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
 }
 @keyframes slit2 {
-  0% {
+  from {
     height: 1px;
     opacity: 1;
     background-color: rgb(255, 255, 255);
   }
-  100% {
+  to {
     height: 50px;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
   }
 }
-.grid #scope {
+.grid #intr3 {
   position: relative;
   background: url("../img/mountain.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.grid #scope .blr {
+.grid #intr3::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: rgba(0, 0, 70, 0.3);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
 }
-.grid #scope svg {
+.grid #intr3 svg {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
-  padding: 0;
 }
-.grid #scope svg defs {
-  margin: 0;
-  padding: 0;
-}
-.grid #scope svg defs pattern {
-  margin: 0;
-  padding: 0;
-}
-.grid #scope svg defs pattern image {
-  margin: 0;
-  padding: 0;
-}
-.grid #scope svg circle, .grid #scope svg line {
+.grid #intr3 svg circle, .grid #intr3 svg line {
   pointer-events: none;
 }
-.grid #fall {
+.grid #intr4 {
   width: 100%;
-  background-color: rgba(50, 205, 50, 0.1);
+  background: linear-gradient(rgb(212, 23, 23), rgb(4, 175, 4));
   position: relative;
   overflow: hidden;
 }
-.grid #fall .fallinDiv {
+.grid #intr4::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(45deg, rgba(238, 255, 0, 0.7), rgba(25, 0, 255, 0.3));
+}
+.grid #intr4 .fallinDiv {
   pointer-events: none;
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background-color: yellow;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  border: 1px solid rgb(255, 81, 0);
 }/*# sourceMappingURL=style.css.map */

@@ -13,7 +13,7 @@ body {
   padding: 0;
   height: 100vh;
 }
-body #lightning .lightningSVG {
+body .lightningSVG {
   opacity: 0;
   position: absolute;
   transform: translateX(-50%);

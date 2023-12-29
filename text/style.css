@@ -35,7 +35,7 @@ body .buttonHolder {
   justify-content: space-evenly;
   align-items: center;
 }
-body .Input {
+body input[type=text] {
   margin: 20px auto;
   display: block;
 }/*# sourceMappingURL=style.css.map */
