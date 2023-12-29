@@ -388,9 +388,7 @@ fetch("./lightning.json")
     return data.json()
 }).then((data)=>{
    // console.log("json",data.LightningSVGs)
-   Object.values(data.LightningSVGs).forEach(svg=>{
-      lightningsSVGs.push(svg)
-   });
+   Object.values(data.LightningSVGs).forEach(svg=>lightningsSVGs.push(svg));
    // document.querySelector("body").insertAdjacentHTML("afterbegin",lightningsSVGs[0])
    // document.querySelector("body").insertAdjacentHTML("afterbegin",lightningsSVGs[2])
    // document.querySelector("body").insertAdjacentHTML("afterbegin",lightningsSVGs[5])
@@ -443,12 +441,12 @@ const makeLightning=(sec, center)=>{
       
       lightningDiv.insertAdjacentHTML("afterbegin",LL);
       // console.log(lightningDiv.firstChild)
-      lightningDiv.firstChild.onanimationend=(e)=>{e.target.remove()};
+      lightningDiv.firstChild.onanimationend=(e)=>e.target.remove();
       
-      lightningDiv.firstChild.style.left=`${rand*100}%`;
+      // lightningDiv.firstChild.style.left=`${rand*100}%`;
       
       // console.log("%%",+center + (50-center)*2*rand)
-      lightningDiv.firstChild.style.left=`50%`;
+      // lightningDiv.firstChild.style.left=`50%`;
 
       lightningDiv.firstChild.style.left=`${+center/2 + (100-center)*1*rand}%`;
 
@@ -456,6 +454,7 @@ const makeLightning=(sec, center)=>{
       lightningDiv.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`;
       lightningDiv.firstChild.style.animationDelay=`${rand*3}s`;
       
+      console.log("Children",lightningDiv.childNodes.length)
       
    
    },sec);
