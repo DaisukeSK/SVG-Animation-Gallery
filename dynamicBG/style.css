@@ -5,6 +5,24 @@ body {
   position: relative;
   height: 100vh;
 }
+body .inputHolder {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+body .inputHolder > label {
+  margin: 0 auto;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+}
+body .inputHolder label {
+  color: white;
+}
+body .inputHolder .inputFlex {
+  display: flex;
+}
 body .message {
   width: -moz-fit-content;
   width: fit-content;
@@ -19,55 +37,26 @@ body .message {
   font-family: arial;
   font-size: 3.5em;
 }
-body .bgContainer1, body .bgContainer2 {
+body .bgContainer {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
 }
-body .bg1 {
+body .bgContainer .bg1, body .bgContainer .bg2 {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 0s ease-in-out;
+}
+body .bgContainer .bg1 {
   width: 18000px;
   height: 100vh;
   background: linear-gradient(45deg, rgb(0, 255, 255), rgb(0, 255, 64), rgb(128, 255, 0), rgb(255, 191, 0), rgb(255, 0, 0), rgb(255, 0, 191), rgb(128, 0, 255), rgb(0, 64, 255), rgb(0, 255, 255));
-  animation-iteration-count: infinite;
-  animation-duration: 400s;
-  animation-delay: 1s;
 }
-@keyframes left1 {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: -16000px;
-  }
-  100% {
-    left: 0;
-  }
-}
-body .bg2 {
-  position: absolute;
-  top: 0;
-  left: 0;
+body .bgContainer .bg2 {
   width: 100%;
-  height: 100vh;
   height: 9500px;
-  background: linear-gradient(hsla(109, 92%, 72%, 0.75), hsla(27, 66%, 49%, 0.84), hsla(54, 100%, 50%, 0.73), hsla(173, 68%, 50%, 0.42), hsla(83, 80%, 45%, 0.65), hsla(1, 100%, 100%, 0.9), hsl(238, 61%, 79%), hsla(204, 85%, 49%, 0.822), hsla(306, 100%, 48%, 0.65));
   background: linear-gradient(135deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 191, 0.5), rgba(128, 0, 255, 0.5), rgba(0, 64, 255, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 255, 64, 0.5), rgba(128, 255, 0, 0.5), rgba(255, 191, 0, 0.5), rgba(255, 0, 0, 0.5));
-  animation-iteration-count: infinite;
-  animation-duration: 200s;
-}
-@keyframes up {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -8000px;
-  }
-  100% {
-    top: 0;
-  }
 }/*# sourceMappingURL=style.css.map */

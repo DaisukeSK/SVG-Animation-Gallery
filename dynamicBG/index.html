@@ -1,37 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
 
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="./src/assets/favicon4.ico" rel="shortcut icon">
-    <link href="./src/assets/favicon4.ico" rel="icon"> -->
     <link href="style.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="hsv.css"> -->
-    
     <title>Dynamic Background</title>
-
   </head>
-  <body>
-    <!-- <div id="root"> -->
-      <div class="bgContainer1">
-        <div class="bg1"></div>
 
+  <body>
+
+      <div class="bgContainer">
+        <div class="bg1"></div>
       </div>
 
-      <div class="bgContainer2">
+      <div class="bgContainer">
         <div class="bg2"></div>
-
       </div>
       
       <div class="message">Color your life</div>
 
-
-      <!-- <div class="bg2"></div> -->
-      <!-- <div class="bg3"></div> -->
-    <!-- </div> -->
-    
-    
+    <div class="inputHolder">
+      <label>Response:</label>
+      <div class="inputFlex">
+        <label>Slow</label>
+        <input type="range" min="0" max="10" value="10"/>
+        <label>Fast</label>
+      </div>
+    </div>
+      
     <script src="main.js"></script>
+    
   </body>
 </html>
