@@ -1,3 +1,5 @@
+const body=document.querySelector("body")
+
 const bubbleSVG=(key,n1,n2,n3)=>{
   return `<svg class="b${key+1}" width="50" height="100">`+
   `<circle cx="${n1}%" cy="${n2}%" r="${n3}" stroke="white" fill="none"></circle>`+
@@ -43,10 +45,10 @@ let bubbles2="";
 let Interval_Light;
 let Interval_Bubble;
 
-const makeBubble=(sec)=>{
+const makeBubble=()=>{
 
   
-  Interval_Bubble=setInterval(()=>{
+  // Interval_Bubble=setInterval(()=>{
     const xx=Math.random()*100;
     const delay=Math.random()*3;
     const scale=Math.random()*0.7+0.3;
@@ -63,7 +65,7 @@ const makeBubble=(sec)=>{
     style="left:${xx}%; animation-delay:${delay}s; transform:scale(${scale*100}%); animation-duration: ${3/scale}s; opacity:${scale};">`+
     bubbleNum+`</div>`;
   
-    document.querySelector("body").insertAdjacentHTML("afterbegin",bubble);
+    body.insertAdjacentHTML("afterbegin",bubble);
     // console.log("bubble")
 
     // document.querySelector(".bubble").onanimationend=(e)=>{e.target.remove(); console.log("Removed.")};
@@ -105,11 +107,11 @@ const makeBubble=(sec)=>{
   
   // console.log("B length:",document.querySelectorAll(".bubble").length)
         
-  }, sec);
+  // }, sec);
 };
 
-  const makeLight=(sec)=>{
-    Interval_Light=setInterval(()=>{
+  const makeLight=(iteration)=>{
+    // Interval_Light=setInterval(()=>{
   
       const width=Math.random()*100+100;
       const height=Math.random()*700+400;
@@ -132,15 +134,13 @@ const makeBubble=(sec)=>{
 
       direction==0 && (direction=-1)
 
-      console.log("deg,dir",Math.round(deg),direction)
+      // console.log("deg,dir",Math.round(deg),direction)
     
 
 
       // width="${width}" height="${height}" style="top: -300px; animation-name: move${animetionNum}; animation-duration: ${duration}s;">`+
       let light=
       `<svg class="light"
-      onanimationend='((e)=>{e.target.remove();})(event)'
-      
       width="${width}" height="${height}" style="top: -300px">
           <defs>
             <linearGradient id="grad_anime" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -152,7 +152,7 @@ const makeBubble=(sec)=>{
           <path d="M${width/2} 0 l-${width/2} ${height} l${width} 0 Z" fill="url(#grad_anime)" filter="blur(7px)"/>
         </svg>`;
     
-        document.querySelector("body").insertAdjacentHTML("afterbegin",light);
+        body.insertAdjacentHTML("afterbegin",light);
         // console.log("------------------------------")
         
         // console.log(document.querySelectorAll(".light").length)
@@ -166,14 +166,35 @@ const makeBubble=(sec)=>{
           },
           {
             duration:duration,
-            iterations: 3,
+            iterations: iteration,
             fill: "both",
           }
         )
     
-        // console.log("L length:",document.querySelectorAll(".light").length)
+        document.querySelectorAll(".light").forEach(li=>{
+
+          // console.log("playstate",(li))
+
+          // li.getAnimations()[0]["playState"]=='finished' && li.remove()
           
-    }, sec);
+          // if(li.getAnimations()[0]["playState"]){
+            
+          //   if(li.getAnimations()[0]["playState"]=='finished'){
+  
+          //     li.remove()
+          //   }
+
+          // }
+
+          Promise.all(
+            li.getAnimations({ subtree: true })
+              .map(animation => animation.finished)
+          ).then(() => li.remove());
+          
+        })
+        
+        console.log("L length:",document.querySelectorAll(".light").length)
+    // }, sec);
   };
 
   
@@ -183,7 +204,10 @@ document.querySelector('input[name="bubble"]').oninput=(e)=>{
   
   console.log("e",e.target.value);
   clearInterval(Interval_Bubble);
-  makeBubble(6000-e.target.value*1000);
+  
+
+
+  Interval_Bubble=setInterval(()=>{makeBubble()},6000-e.target.value*1000)
   
 };
 
@@ -191,10 +215,22 @@ document.querySelector('input[name="light"]').oninput=(e)=>{
   
   console.log("e",e.target.value);
   clearInterval(Interval_Light);
-  makeLight(6000-e.target.value*1000);
+  
+
+  Interval_Light=setInterval(()=>{makeLight(3);},6000-e.target.value*1000)
   
 };
 
 
-makeBubble(3000);
-makeLight(3000);
+setTimeout(()=>{
+  for(let i=0;i<=4;i++){
+    makeLight(1)
+    makeLight(2)
+  }
+
+  Interval_Bubble=setInterval(()=>{makeBubble()},3000)
+  Interval_Light=setInterval(()=>{makeLight(3);},3000)
+  
+},100)
+
+// makeBubble(3000);

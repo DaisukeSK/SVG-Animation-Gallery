@@ -18,9 +18,9 @@ const svgForBorder=document.querySelector(".svgForBorder rect")
 const levelUp=document.querySelector("svg.levelUp")
 const levelDown=document.querySelector("svg.levelDown")
 const checkSVG=document.querySelector("svg.checkSVG")
-const growingCircle=document.querySelector(".growingCircle")
+const loadingCircle=document.querySelector(".loadingCircle")
 const count3=document.querySelector(".count3")
-// const growingCircleAnimate=document.querySelector(".growingCircle animate")
+// const loadingCircleAnimate=document.querySelector(".loadingCircle animate")
 // const animate=document.querySelectorAll(".animate")
 
 let terms={}
@@ -32,8 +32,9 @@ fetch("./terms.json")
 
 
   terms={...data}
-}).then(()=>{
-  // console.log("terms",terms)
+})
+// .then(()=>{
+  
 
   counter.innerText=0
 
@@ -89,6 +90,7 @@ fetch("./terms.json")
         
         correctAnswer=true
         // rslt.innerText="Right"
+
         count++
         
         counter.innerText=count
@@ -102,7 +104,7 @@ fetch("./terms.json")
             //   val.setAttribute("dur","1s")
             // })
             levelUp.style.display="block"
-            levelUp.querySelectorAll("animate").forEach(val=>{val.beginElement()})
+            levelUp.querySelectorAll("animate").forEach(val=>val.beginElement())
           levelDiv.style.animationName="shake2"
           levelNumber.style.animationName="newLevel"
           levelNumber.innerText=level
@@ -136,6 +138,8 @@ fetch("./terms.json")
           if(level>1){
 
             levelDown.style.display="block"
+            levelDown.querySelectorAll("animate").forEach(ani=>ani.beginElement())
+            
           }
           counter.style.color="red"
           secondDiv.style.color="red"
@@ -156,8 +160,6 @@ fetch("./terms.json")
         }, 1000)
         timeBar.style.animationName=null
         second.style.animationName=null
-      }else{
-        
       }
       
       i--
@@ -171,6 +173,8 @@ fetch("./terms.json")
 
     console.log(e.target.parentNode)
     e.target.parentNode.style.display="none"
+    loadingCircle.style.opacity="1"
+    loadingCircle.querySelectorAll("animate").forEach(ani=>ani.beginElement())
     let c=2
     const initCount=setInterval(()=>{
 
@@ -179,11 +183,9 @@ fetch("./terms.json")
     },1000)
     
     // e.target.style.display="none"
-    growingCircle.style.opacity="1"
-    growingCircle.querySelectorAll("animate").forEach(val=>{val.beginElement()})
     setTimeout(()=>{
       clearInterval(initCount)
-      growingCircle.style.display="none"
+      loadingCircle.style.display="none"
       container.style.display="block"
       showQuestion()
 
@@ -192,6 +194,6 @@ fetch("./terms.json")
   }
   
 
-})  
+// })  
 
   

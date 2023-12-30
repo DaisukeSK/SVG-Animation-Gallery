@@ -9,9 +9,8 @@
 
   </head>
   <body>
-
     
-    <div class="growingCircle">
+    <div class="loadingCircle">
 
       <svg height="200" width="200">
         <circle cx="100" cy="100" r="80" fill="none" stroke-width="40">
@@ -20,7 +19,7 @@
         </circle>
       </svg>
         
-      <div class="middleInCircle">
+      <div class="middleOfCircle">
         <div>Get ready...</div>
         <div class="count3">3</div>
       </div>
@@ -76,7 +75,7 @@
 
       <svg class="levelDown" width="430" height="50">
         <defs>
-          <pattern id="levelDown_anime" width="100%" height="100%">
+          <!-- <pattern id="levelDown_anime" width="100%" height="100%">
             
             <rect x="0" width="400" height="80" fill="lightblue"/>
             <rect x="0" y="-50" width="400" height="1" fill="blue">
@@ -115,12 +114,25 @@
             <rect x="0" y="-50" width="400" height="2" fill="white">
               <animate attributeName="y" values="44;22;66;77" dur="2s" repeatCount="indefinite">
             </rect>
-          </pattern>
+          </pattern> -->
+
+          <linearGradient id="levelDown_anime2" x1="0%" y1="0%" x2="0" y2="100%">
+       
+            <stop style="stop-color:navy">
+              <animate attributeName="offset" dur="1s" values="-1;1" repeatCount="1" />
+            </stop>
+            <stop style="stop-color:cyan">
+              <animate attributeName="offset" dur="1s" values="0;2" repeatCount="1" />
+            </stop>
+           
+          </linearGradient>  
           
         </defs>
        
-        <text x="0" y="40" stroke="navy" fill="url(#levelDown_anime)" stroke-width="3">LEVEL DOWN</text>
-      <!--   <rect x="50%" y="40" rx="10" width="140" height="120" fill="url(#grad_anime)"/> -->
+        <!-- <text x="0" y="40" stroke="navy" fill="url(#levelDown_anime)" stroke-width="3">LEVEL DOWN</text> -->
+       
+        <text x="0" y="40" stroke="#2E2EFF" fill="url(#levelDown_anime2)" stroke-width="5">LEVEL DOWN</text>
+
       </svg>
 
 
@@ -159,5 +171,7 @@
     
     <script src="svgBG.js"></script>
     <script src="main.js"></script>
+
+    
   </body>
 </html>

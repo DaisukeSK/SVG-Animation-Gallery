@@ -376,6 +376,7 @@
 // </g>
 // </svg>`
 const body=document.querySelector("body");
+const svgContainer=document.querySelector(".svgContainer");
 const animate=document.querySelector("animate");
 const centralize=document.querySelector('input[name="centralize"]');
 const amount=document.querySelector('input[name="amount"]');
@@ -439,22 +440,22 @@ const makeLightning=(sec, center)=>{
       lightningsSVGs[5];
       
       
-      body.insertAdjacentHTML("afterbegin",LL);
+      svgContainer.insertAdjacentHTML("afterbegin",LL);
       // console.log(lightningDiv.firstChild)
-      body.firstChild.onanimationend=(e)=>e.target.remove();
+      svgContainer.firstChild.onanimationend=(e)=>e.target.remove();
       
       // lightningDiv.firstChild.style.left=`${rand*100}%`;
       
       // console.log("%%",+center + (50-center)*2*rand)
       // lightningDiv.firstChild.style.left=`50%`;
 
-      body.firstChild.style.left=`${+center/2 + (100-center)*1*rand}%`;
+      svgContainer.firstChild.style.left=`${+center/2 + (100-center)*1*rand}%`;
 
    
-      body.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`;
-      body.firstChild.style.animationDelay=`${rand*3}s`;
+      svgContainer.firstChild.style.top=`${(-1500+innerHeight+50)*rand}px`;
+      svgContainer.firstChild.style.animationDelay=`${rand*3}s`;
       
-      console.log("Children",body.childNodes.length)
+      console.log("Children",svgContainer.childNodes.length)
       
    
    },sec);

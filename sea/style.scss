@@ -5,6 +5,12 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(rgba(92, 233, 219, 0.445),rgb(2, 2, 133));
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     .bubble{
         position: absolute;
         // width: fit-content;

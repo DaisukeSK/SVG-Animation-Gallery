@@ -6,17 +6,17 @@ body {
   height: 100vh;
 }
 
-.growingCircle {
+.loadingCircle {
   position: absolute;
   top: 170px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
 }
-.growingCircle svg {
+.loadingCircle svg {
   transform: rotate(-90deg);
 }
-.growingCircle .middleInCircle {
+.loadingCircle .middleOfCircle {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -24,7 +24,7 @@ body {
   font-size: 1.4em;
   text-align: center;
 }
-.growingCircle .middleInCircle .count3 {
+.loadingCircle .middleOfCircle .count3 {
   font-weight: bold;
 }
 
