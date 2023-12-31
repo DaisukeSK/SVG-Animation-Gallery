@@ -1,3 +1,14 @@
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   position: relative;
   overflow: hidden;
@@ -46,15 +57,4 @@ body .shapeSVG {
   animation-iteration-count: 5;
   animation-duration: 7s;
   animation-fill-mode: both;
-}
-@keyframes blur {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
 }/*# sourceMappingURL=style.css.map */

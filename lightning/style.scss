@@ -13,8 +13,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    // background-color: black;
-
     .svgContainer {
         position: absolute;
         width: 100%;
@@ -30,10 +28,6 @@ body {
             animation-fill-mode: forwards;
         }
     }
-
-    // #lightning {
-    // }
-    
     .rangeContainer {
         display: grid;
         grid-template-columns: 80px 150px;
@@ -42,7 +36,6 @@ body {
         top: 10px;
         left: 10px;
         z-index: 10;
-        // transform: translateX(-50%);
         .paramName {
             color: white;
         }

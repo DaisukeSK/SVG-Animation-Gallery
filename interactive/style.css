@@ -1,3 +1,53 @@
+@keyframes bigger {
+  0% {
+    width: 1px;
+    height: 1px;
+    opacity: 1;
+    background-color: red;
+  }
+  33% {
+    width: 33px;
+    height: 33px;
+    opacity: 0.66;
+    background-color: yellow;
+  }
+  66% {
+    width: 66px;
+    height: 66px;
+    opacity: 0.33;
+    background-color: lime;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    background-color: RoyalBlue;
+  }
+}
+@keyframes slit {
+  from {
+    width: 1px;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+  }
+  to {
+    width: 50px;
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+@keyframes slit2 {
+  from {
+    height: 1px;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+  }
+  to {
+    height: 50px;
+    opacity: 0;
+    background-color: transparent;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -31,32 +81,6 @@ body {
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
-@keyframes bigger {
-  0% {
-    width: 1px;
-    height: 1px;
-    opacity: 1;
-    background-color: red;
-  }
-  33% {
-    width: 33px;
-    height: 33px;
-    opacity: 0.66;
-    background-color: yellow;
-  }
-  66% {
-    width: 66px;
-    height: 66px;
-    opacity: 0.33;
-    background-color: lime;
-  }
-  100% {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-    background-color: RoyalBlue;
-  }
-}
 .grid #intr2 {
   position: relative;
   width: 100%;
@@ -85,36 +109,12 @@ body {
   transform: translateX(-50%);
   animation-name: slit;
 }
-@keyframes slit {
-  from {
-    width: 1px;
-    opacity: 1;
-    background-color: rgb(255, 255, 255);
-  }
-  to {
-    width: 50px;
-    opacity: 0;
-    background-color: transparent;
-  }
-}
 .grid #intr2 .hori {
   left: 0;
   height: 1px;
   width: 100%;
   transform: translateY(-50%);
   animation-name: slit2;
-}
-@keyframes slit2 {
-  from {
-    height: 1px;
-    opacity: 1;
-    background-color: rgb(255, 255, 255);
-  }
-  to {
-    height: 50px;
-    opacity: 0;
-    background-color: transparent;
-  }
 }
 .grid #intr3 {
   position: relative;

@@ -1,6 +1,5 @@
-
-
-const html=`<linearGradient id="bg1" x1="0%" y1="100%" x2="0%" y2="0%">
+const html=`
+<linearGradient id="bg1" x1="0%" y1="100%" x2="0%" y2="0%">
 <stop offset="0" style="stop-color:limegreen">
   <animate attributeName="offset" dur="5s" values="-1;1" repeatCount="indefinite"/>
 </stop>
@@ -17,7 +16,6 @@ const html=`<linearGradient id="bg1" x1="0%" y1="100%" x2="0%" y2="0%">
   <animate attributeName="offset" dur="5s" values="-0.2;1.8" repeatCount="indefinite"/>
 </stop>
 </linearGradient>
-
 
 <radialGradient id="bg2" cy="50%" r="80%">
 <stop offset="0" style="stop-color:orangered" closest-corner>
@@ -39,28 +37,5 @@ const html=`<linearGradient id="bg1" x1="0%" y1="100%" x2="0%" y2="0%">
   <animate attributeName="offset" dur="3s" values="0;2.7" repeatCount="indefinite"/>
 </stop>
 </radialGradient>
-
-<!--
-<pattern id="bg3" width="100%" height="100%">
-<rect y="0" width="100%" height="100%">
-<animate attributeName="fill" values="orangered;orange;gold;yellow;gold;orange;orangered" dur="2.5s" repeatCount="indefinite">  
-</rect>
-
-</pattern>
-  <pattern id="bdr3" width="100%" height="100%">
-<rect y="0" width="100%" height="100%" fill="blue">
-<animate attributeName="fill" values="orangered;orange;gold;yellow;gold;orange;orangered" begin=".5s" dur="2.5s" repeatCount="indefinite">  
-</rect>
-      
-      </pattern>-->
-
-      
-
 `
-
-
-// const html=`<div>aa</div>`
-
-
-
 document.querySelector("defs.borderDefs").insertAdjacentHTML("beforeend",html)

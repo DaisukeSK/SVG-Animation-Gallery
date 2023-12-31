@@ -1,0 +1,46 @@
+{
+    "data":[
+        {
+            "title":"Dynamic Background",
+            "description":"Background changes in responce to your mouse move.",
+            "img":"color_your_life.png",
+            "path":"./dynamicBG/index.html"
+        },
+        {
+            "title":"Shapes and Colors",
+            "description":"Choose your favorite shape and color.",
+            "img":"shapes.png",
+            "path":"./shapesNcolors/index.html"
+        },
+        {
+            "title":"Lightning",
+            "description":"Now you are Thor.",
+            "img":"lightning.png",
+            "path":"./lightning/index.html"
+        },
+        {
+            "title":"Under the Sea",
+            "description":"Enjoy peace under the sea.",
+            "img":"bubbles.png",
+            "path":"./sea/index.html"
+        },
+        {
+            "title":"Text Styles",
+            "description":"Cool text styles.",
+            "img":"type.png",
+            "path":"./text/index.html"
+        },
+        {
+            "title":"Interactive Mouse Event",
+            "description":"Which one is your favorite?",
+            "img":"interactive.png",
+            "path":"./interactive/index.html"
+        },
+        {
+            "title":"Typing Test",
+            "description":"Calm down and try your best.",
+            "img":"typing.png",
+            "path":"./typing/index.html"
+        }
+    ]
+}

@@ -1,3 +1,28 @@
+@keyframes goUp {
+    from {top: 700px;
+    }
+    to {top: -100px;
+    }
+}
+
+@keyframes bubble {
+    0% {
+        left: -3px;
+    }
+    25% {
+        left: 1px;
+    }
+    50% {
+        left: -2px;
+    }
+    75% {
+        left: 2px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
 body {
     position: relative;
     overflow: hidden;
@@ -5,7 +30,6 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(rgba(92, 233, 219, 0.445),rgb(2, 2, 133));
-
     .container {
         position: absolute;
         top: 0;
@@ -13,46 +37,16 @@ body {
     }
     .bubble{
         position: absolute;
-        // width: fit-content;
-        @keyframes goUp {
-            from {top: 700px;
-            }
-            to {top: -100px;
-            }
-        }
         animation-name: goUp;
         animation-iteration-count: 1;
         animation-timing-function: linear;
-        
         animation-fill-mode: both;
         svg {
             position: absolute;
-    
-            @keyframes bubble {
-                0% {
-                    left: -3px;
-                }
-                25% {
-                    left: 1px;
-                }
-                50% {
-                    left: -2px;
-                }
-                75% {
-                    left: 2px;
-                }
-                100% {
-                    left: 0px;
-                }
-            }
-    
-            
             animation-name: bubble;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
             animation-duration: .3s;
-            
-            
         }
         .b1 {
             animation-delay: .2s
@@ -66,14 +60,14 @@ body {
         .b4 {
             animation-delay: .7s
         }
-    
     }
+
     .light {
         position: absolute;
         left: 50%;
-    
         transform-origin: 50% 0;        
     }
+
     .rangeContainer {
         display: grid;
         grid-template-columns: 70px 150px;
@@ -97,13 +91,3 @@ body {
         }
     }
 }
-
-
-// #light {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-    
-
-    
-// }

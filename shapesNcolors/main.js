@@ -1,4 +1,3 @@
-
 const colorsArray =[
     {1:"cyan", 2:"lightblue", 3:"blue", bg:'rgba(0, 0, 255, 0.5)'},
     {1:"orange", 2:"yellow", 3:"red", bg:'rgba(255, 0, 0, 0.5)'},
@@ -19,8 +18,6 @@ const outlineStyle='3px solid white';
 
 const colorButtons=document.querySelectorAll(".color1, .color2, .color3");
 const shapeButtons=document.querySelectorAll(".shape1, .shape2, .shape3");
-
-
 
 const typeChange=(num, color, width)=>{
 
@@ -48,28 +45,25 @@ const makeCircle=()=>{
     const diameter=Math.random()*150+100;
     const rand=Math.ceil(Math.random()*3);
 
-    const svg= 
-    `<svg class="shapeSVG" width=${diameter} height=${diameter}
-    onanimationend='((e)=>{
-        console.log("remove");
-        e.target.remove();
-    })(event)'
-        style="top:${xx}%; left:${yy}%; animation-duration: ${glow}s; animation-delay: ${delay}s;
-        transform:${styleTransform[type]};">`+
-
-        typeChange(type, colorsArray[color][rand], diameter)+
-
+    const svg=`
+    <svg
+        class= "shapeSVG"
+        width= ${diameter}
+        height= ${diameter}
+        onanimationend= '((e)=>{
+            console.log("remove");
+            e.target.remove();
+        })(event)'
+        style= "top:${xx}%; left:${yy}%; animation-duration: ${glow}s; animation-delay: ${delay}s; transform:${styleTransform[type]};"
+    >`
+    + typeChange(type, colorsArray[color][rand], diameter) +
     '</svg>';
-
-    // document.querySelector(".svgContainer").insertAdjacentHTML("afterbegin", svg);
     document.querySelector("body").insertAdjacentHTML("afterbegin", svg);
-    // document.querySelector(".shapeSVG").onanimationend=(e)=>e.target.remove();
 };
 
 const bgChange=(number)=>{
     document.querySelector("body").style.background=`linear-gradient(${colorsArray[number][1]},${colorsArray[number][2]},${colorsArray[number][3]})`
 };
-
 
 colorButtons.forEach((val,key)=>{
     val.onclick=(e)=>{
@@ -93,15 +87,12 @@ colorButtons.forEach((val,key)=>{
         
         document.querySelectorAll(".shapeSVG").forEach(svg=>{
             const rand=Math.ceil(Math.random()*3)
-            
             svg.firstChild.tagName=="path"?
             svg.firstChild.setAttribute("stroke",colorsArray[key][rand]):
             svg.firstChild.setAttribute("fill",colorsArray[key][rand])
-
         });
     };
 });
-
 
 shapeButtons.forEach((val,key)=>{
 
@@ -119,18 +110,16 @@ shapeButtons.forEach((val,key)=>{
         e.target.closest("div").style.pointerEvents= 'none';
         
         document.querySelectorAll(".shapeSVG").forEach(svg=>{
-            
+
             svg.style.transform=styleTransform[key];
             let fill=svg.firstChild.getAttribute("fill")!=="none"?
                 svg.firstChild.getAttribute("fill"):
                 svg.firstChild.getAttribute("stroke");
             svg.firstChild.remove();
             svg.insertAdjacentHTML("beforeend",typeChange(type, fill, Math.round(svg.getAttribute("width"))));
-            
         });
     };
 });
-
 
 window.onload=()=>{
 
