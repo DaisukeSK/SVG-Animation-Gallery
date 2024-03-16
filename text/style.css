@@ -16,6 +16,9 @@ body {
 }
 body .outputDiv {
   height: 150px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 body .outputDiv svg {
   overflow: visible;
