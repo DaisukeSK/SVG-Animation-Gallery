@@ -10,36 +10,51 @@
   }
 }
 body {
-  font-family: "Times New Roman", Times, Arial, serif;
+  position: relative;
   overflow: hidden;
-  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body .outputDiv {
+body svg {
   height: 150px;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
-}
-body .outputDiv svg {
   overflow: visible;
 }
-body .outputDiv svg .initText {
+body svg .initText {
   animation-name: blink;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 body .buttonHolder {
-  width: 500px;
-  height: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: darkseagreen;
-  margin: 0 auto;
-  padding-top: 3px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+body .buttonHolder button {
+  margin: 15px;
+}
 body input[type=text] {
-  margin: 20px auto;
-  display: block;
+  margin: 20px;
+}
+body hr {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #aaaaaa;
+}
+body .showCode {
+  width: 50%;
+}
+body .showCode pre {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
 }/*# sourceMappingURL=style.css.map */
