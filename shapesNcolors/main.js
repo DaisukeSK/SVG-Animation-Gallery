@@ -1,6 +1,6 @@
 const colorsArray =[
     {1:"cyan", 2:"lightblue", 3:"blue", bg:'rgba(0, 0, 255, 0.5)'},
-    {1:"orange", 2:"yellow", 3:"red", bg:'rgba(255, 0, 0, 0.5)'},
+    {1:"yellow", 2:"orange", 3:"red", bg:'rgba(255, 0, 0, 0.5)'},
     {1:"chartreuse", 2:"lightgreen", 3:"green", bg:'rgba(0, 128, 0, 0.5)'}
 ];
 
@@ -85,11 +85,34 @@ colorButtons.forEach((val,key)=>{
 
         bgChange(color);
         
+        // document.querySelectorAll(".shapeSVG").forEach(svg=>{
+        //     const rand=Math.ceil(Math.random()*3)
+        //     svg.firstChild.tagName=="path"?
+        //     svg.firstChild.setAttribute("stroke",colorsArray[key][rand]):
+        //     svg.firstChild.setAttribute("fill",colorsArray[key][rand])
+        // });
+
         document.querySelectorAll(".shapeSVG").forEach(svg=>{
-            const rand=Math.ceil(Math.random()*3)
+            const colorName=svg.firstChild.getAttribute(svg.firstChild.tagName=="path"?"stroke":"fill")
+            
+            let number;
+            switch(colorName){
+                case "chartreuse":
+                case "cyan":
+                case "yellow":
+                    number=1;
+                    break;
+                case "lightblue":
+                case "orange":
+                case "lightgreen":
+                    number=2;
+                    break;
+                default: number=3
+                }
+
             svg.firstChild.tagName=="path"?
-            svg.firstChild.setAttribute("stroke",colorsArray[key][rand]):
-            svg.firstChild.setAttribute("fill",colorsArray[key][rand])
+            svg.firstChild.setAttribute("stroke",colorsArray[key][number]):
+            svg.firstChild.setAttribute("fill",colorsArray[key][number])
         });
     };
 });

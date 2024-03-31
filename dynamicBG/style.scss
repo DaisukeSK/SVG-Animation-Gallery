@@ -1,10 +1,6 @@
 body {
-    font-family: 'Times New Roman', Times, Arial, serif;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    height: 100vh;
+    
+    
 
     .inputHolder {
         position: absolute;
@@ -34,7 +30,7 @@ body {
         color: rgba(255, 255, 255, 0.3);
         font-style: italic;
         font-weight: bold;
-        font-family: arial;
+        // font-family: arial;
         font-size: 3.5em;
     }
 
@@ -48,7 +44,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            transition: all 0s ease-in-out;
+            // transition: all 0s ease-in-out;
         }
 
         .bg1{

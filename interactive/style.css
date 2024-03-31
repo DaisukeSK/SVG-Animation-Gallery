@@ -48,14 +48,7 @@
     background-color: transparent;
   }
 }
-body {
-  font-family: "Times New Roman", Times, Arial, serif;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.grid {
+body .grid {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -64,14 +57,14 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-.grid #intr1 {
+body .grid #intr1 {
   position: relative;
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 255, 150, 0.7), white, rgba(0, 183, 255, 0.7));
   overflow: hidden;
 }
-.grid #intr1 .child {
+body .grid #intr1 .child {
   pointer-events: none;
   position: absolute;
   width: 1px;
@@ -83,7 +76,7 @@ body {
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
-.grid #intr2 {
+body .grid #intr2 {
   position: relative;
   width: 100%;
   background-image: url("../img/night.png");
@@ -91,40 +84,40 @@ body {
   background-position: bottom;
   overflow: hidden;
 }
-.grid #intr2 img {
-  min-width: 100%;
-  min-height: 100%;
+body .grid #intr2 img {
+  width: 100%;
   position: absolute;
+  bottom: 0;
   z-index: 1;
 }
-.grid #intr2 .ver, .grid #intr2 .hori {
+body .grid #intr2 .ver, body .grid #intr2 .hori {
   pointer-events: none;
   position: absolute;
   animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
-.grid #intr2 .ver {
+body .grid #intr2 .ver {
   top: 0;
   width: 1px;
   height: 100%;
   transform: translateX(-50%);
   animation-name: slit;
 }
-.grid #intr2 .hori {
+body .grid #intr2 .hori {
   left: 0;
   height: 1px;
   width: 100%;
   transform: translateY(-50%);
   animation-name: slit2;
 }
-.grid #intr3 {
+body .grid #intr3 {
   position: relative;
   background: url("../img/mountain.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.grid #intr3::before {
+body .grid #intr3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -135,21 +128,21 @@ body {
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
 }
-.grid #intr3 svg {
+body .grid #intr3 svg {
   position: absolute;
   top: 0;
   left: 0;
 }
-.grid #intr3 svg circle, .grid #intr3 svg line {
+body .grid #intr3 svg circle, body .grid #intr3 svg line {
   pointer-events: none;
 }
-.grid #intr4 {
+body .grid #intr4 {
   width: 100%;
   background: linear-gradient(rgb(212, 23, 23), rgb(4, 175, 4));
   position: relative;
   overflow: hidden;
 }
-.grid #intr4::before {
+body .grid #intr4::before {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -158,7 +151,7 @@ body {
   content: "";
   background: linear-gradient(45deg, rgba(238, 255, 0, 0.7), rgba(25, 0, 255, 0.3));
 }
-.grid #intr4 .fallinDiv {
+body .grid #intr4 .fallinDiv {
   pointer-events: none;
   position: absolute;
   width: 7px;

@@ -38,6 +38,7 @@ document.querySelector("#intr1").onmousemove=(e)=>{
 
 ////////////////////// No.2 //////////////////////
 document.querySelector("#intr2 img").onmousemove=(e)=>{
+    console.log("client",e.clientX,e.clientY)
     const insert=`
     <div
         class= 'ver'
@@ -48,7 +49,7 @@ document.querySelector("#intr2 img").onmousemove=(e)=>{
     <div
         class= 'hori'
         onanimationend= '((e)=>e.target.remove())(event)'
-        style= 'top:${e.offsetY}px;'
+        style= 'top:${e.clientY}px;'
     >
     </div>`
 

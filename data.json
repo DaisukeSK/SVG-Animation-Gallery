@@ -14,7 +14,7 @@
         },
         {
             "title":"Lightning",
-            "description":"Now you are Thor.",
+            "description":"Lightning effect animation.",
             "img":"lightning.png",
             "path":"./lightning/index.html"
         },

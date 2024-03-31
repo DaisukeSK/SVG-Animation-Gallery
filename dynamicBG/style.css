@@ -1,11 +1,3 @@
-body {
-  font-family: "Times New Roman", Times, Arial, serif;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  height: 100vh;
-}
 body .inputHolder {
   position: absolute;
   top: 20px;
@@ -35,7 +27,6 @@ body .message {
   color: rgba(255, 255, 255, 0.3);
   font-style: italic;
   font-weight: bold;
-  font-family: arial;
   font-size: 3.5em;
 }
 body .bgContainer {
@@ -49,7 +40,6 @@ body .bgContainer .bg1, body .bgContainer .bg2 {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0s ease-in-out;
 }
 body .bgContainer .bg1 {
   width: 18000px;
