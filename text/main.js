@@ -10,9 +10,6 @@ const translate = document.querySelectorAll(".translate")
 const skew = document.querySelectorAll(".skew")
 const code = document.querySelector("code")
 const pre = document.querySelector("pre")
-// const code2 = document.querySelector(".code2")
-
-// initText.style.transform=`translateX(-${initText.getBoundingClientRect().width/2}px)`
 
 let selectedType=2
 
@@ -40,7 +37,6 @@ const showCode=()=>{
     let type=type1.outerHTML+"\n"
     type2 && (type+=type2.outerHTML)
 
-    // code.innerText=svg.outerHTML
     code.innerText=Input.value==""?"":
     svg.outerHTML.split(">")[0]+">"+"\n"+
     "<defs>"+"\n"+
@@ -59,9 +55,6 @@ Input.oninput=(e)=>{
 
     svg.setAttribute("width",outputTXT[0].getBoundingClientRect().width+100)
 
-    // e.target.value=="" ?
-    // initText.setAttribute("display","block"):
-    // initText.setAttribute("display","none")
     initText.setAttribute("display",e.target.value==""?"block":"none")
 
     outputTXT.forEach(txt=>
@@ -72,10 +65,9 @@ Input.oninput=(e)=>{
     
 }
 
-
 typeButtons.forEach((bttn,key)=>{
     bttn.onclick=()=>{
-        // forType4=''
+
         outputTXT[0].setAttribute("fill","none")
         outputTXT[0].setAttribute("stroke-width","9")
 
@@ -120,14 +112,10 @@ typeButtons.forEach((bttn,key)=>{
             outputTXT[1].setAttribute("fill","url(#type4_1)")
             setTimeout(()=>{
                 blackGradAnm.forEach(val=>{
-                // val.setAttribute("dur","2s")
                 val.beginElement()
                 })
             },1000)
 
-            // forType4=
-            // document.querySelector(`.zoomOut`).outerHTML+"\n"+
-            // document.querySelector(`.opacityAnimate`).outerHTML
         }else if(key==4){
             selectedType=5
             outputTXT[0].setAttribute("stroke-width","3")

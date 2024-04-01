@@ -1,7 +1,4 @@
 body {
-    
-    
-
     .inputHolder {
         position: absolute;
         top: 20px;
@@ -30,7 +27,6 @@ body {
         color: rgba(255, 255, 255, 0.3);
         font-style: italic;
         font-weight: bold;
-        // font-family: arial;
         font-size: 3.5em;
     }
 
@@ -44,7 +40,6 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            // transition: all 0s ease-in-out;
         }
 
         .bg1{
@@ -60,7 +55,6 @@ body {
                 rgb(128, 0, 255),
                 rgb(0, 64, 255),
                 rgb(0, 255, 255),
-            
             );
         }
     

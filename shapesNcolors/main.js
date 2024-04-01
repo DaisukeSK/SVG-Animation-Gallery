@@ -84,13 +84,6 @@ colorButtons.forEach((val,key)=>{
         shapeButtons[2].querySelector("path").setAttribute("stroke",colorsArray[key]["bg"]);
 
         bgChange(color);
-        
-        // document.querySelectorAll(".shapeSVG").forEach(svg=>{
-        //     const rand=Math.ceil(Math.random()*3)
-        //     svg.firstChild.tagName=="path"?
-        //     svg.firstChild.setAttribute("stroke",colorsArray[key][rand]):
-        //     svg.firstChild.setAttribute("fill",colorsArray[key][rand])
-        // });
 
         document.querySelectorAll(".shapeSVG").forEach(svg=>{
             const colorName=svg.firstChild.getAttribute(svg.firstChild.tagName=="path"?"stroke":"fill")

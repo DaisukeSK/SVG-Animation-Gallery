@@ -7,7 +7,7 @@
     "phone",
     "zebra",
     "pen",
-    "query",
+    "jump",
     "tree",
     "ant",
     "great",
@@ -26,12 +26,26 @@
     "oil",
     "join",
     "note",
-    "tale",
-    "sail",
-
-    "dense",
+    "home",
+    "hand",
+    "very",
+    "cast",
     "moon",
-    "venus",
+    "send",
+    "card",
+    "fancy",
+    "nail",
+    "bird",
+    "lion",
+    "tea",
+    "blue",
+    "easy",
+    "take",
+    "big",
+    "nap",
+    "wall",
+    "turn",
+    "ball",
     "right"
 ],
 
@@ -64,12 +78,43 @@
     "beyond",
     "benefit",
     "excuse",
-    "beach",
-    "diameter"
+    "diameter",
+    "company",
+    "distress",
+    "appear",
+    "square",
+    "disgust",
+    "helpless",
+    "disaster",
+    "forward",
+    "interest",
+    "courage",
+    "coward",
+    "highest",
+    "deliver",
+    "contract",
+    "economy",
+    "friendly",
+    "deadly",
+    "weapon",
+    "distance",
+    "galaxy",
+    "fountain",
+    "receipt"
 
 ],
 "3":
 [
+    "telephone",
+    "community",
+    "dynamite",
+    "distribute",
+    "convenient",
+    "discharge",
+    "bankrupt",
+    "execution",
+    "implement",
+    "supplement",
     "weather",
     "typhoon",
     "brother",
@@ -88,7 +133,6 @@
     "trouble",
     "religion",
     "believe",
-
     "undertake",
     "depress",
     "oversleep",
@@ -96,10 +140,18 @@
     "foresee",
     "popular",
     "expensive",
+    "oxygen",
     "opinion"
 ],
 "4":
 [
+    "deficiency",
+    "alternative",
+    "counterpart",
+    "fundamental",
+    "merchandise",
+    "professional",
+    "psychology",
     "delicious",
     "experience",
     "environment",
@@ -121,12 +173,15 @@
     "anxiety",
     "fingertip"
 
-
-
 ],
 "5":
 [
-    
+    "comprehensive",
+    "optimistically",
+    "entrepreneur",
+    "acquaintance",
+    "notification",
+    "hippopotamus",
     "extraordinary",
     "superstition",
     "simultaneously",
@@ -141,13 +196,6 @@
     "advertisement",
     "international",
     "discrimination"
-    
-
-
-
 ]
-
-
-
 
 }
