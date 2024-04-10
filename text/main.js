@@ -15,17 +15,27 @@ let selectedType=2
 
 const showCode=()=>{
 
-    console.log("reg:",document.querySelectorAll(`text`)[0].outerHTML.split(/\<animateTransform|\animateTransform>/))
+    // console.log("reg:",document.querySelectorAll(`text`)[0].outerHTML.split(/\<animateTransform|\animateTransform>/))
     const getText1=document.querySelectorAll(`text`)[0].outerHTML.split(/\<animateTransform|\animateTransform>/)
     const getText2=document.querySelectorAll(`text`)[1].outerHTML.split(/\<animateTransform|\animateTransform>/)
 
-    const text1=selectedType==2 || selectedType==5?
-    getText1[0]+"\n"+getText1[4]:
-    document.querySelectorAll(`text`)[0].outerHTML
+    // const text1=selectedType==2 || selectedType==5?
+    // getText1[0]+"\n"+getText1[4]:
+    // document.querySelectorAll(`text`)[0].outerHTML
 
-    const text2=selectedType==1 || selectedType==3 || selectedType==6?
+    // const text2=selectedType==1 || selectedType==3 || selectedType==6?
+    // document.querySelectorAll(`text`)[1].outerHTML:
+    // getText2[0]+"\n"+getText2[4]
+
+    const text1=selectedType==6?
+    document.querySelectorAll(`text`)[0].outerHTML:
+    getText1[0]+"\n"+getText1[4]
+
+    const text2=selectedType==6?
     document.querySelectorAll(`text`)[1].outerHTML:
     getText2[0]+"\n"+getText2[4]
+
+
 
     const forType4=selectedType==4?
     document.querySelector(`.zoomOut`).outerHTML+"\n"+
@@ -62,7 +72,6 @@ Input.oninput=(e)=>{
     );
 
     showCode()
-    
 }
 
 typeButtons.forEach((bttn,key)=>{
