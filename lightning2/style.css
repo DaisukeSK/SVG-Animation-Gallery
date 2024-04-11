@@ -1,0 +1,45 @@
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+body .svgContainer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+body .svgContainer .lightningSVG {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+body .rangeContainer {
+  display: grid;
+  grid-template-columns: 80px 150px;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+body .rangeContainer .paramName {
+  color: white;
+}
+body .rangeContainer .flex {
+  display: flex;
+  align-items: center;
+}
+body .rangeContainer .flex img {
+  width: 15px;
+}
+body .rangeContainer .flex input {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
