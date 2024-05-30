@@ -37,6 +37,12 @@
             "path":"./interactive/index.html"
         },
         {
+            "title":"Matrix Screen Saver",
+            "description":"I'll show you how deep the rabbit hole goes.",
+            "img":"matrix.png",
+            "path":"./matrix/index.html"
+        },
+        {
             "title":"Typing Test",
             "description":"Calm down and try your best.",
             "img":"typing.png",
