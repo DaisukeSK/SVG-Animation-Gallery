@@ -1,82 +1,25 @@
-@keyframes goUp {
-  from {
-    top: 700px;
-  }
-  to {
-    top: -100px;
-  }
-}
-@keyframes bubble {
-  0% {
-    left: -3px;
-  }
-  25% {
-    left: 1px;
-  }
-  50% {
-    left: -2px;
-  }
-  75% {
-    left: 2px;
-  }
-  100% {
-    left: 0px;
-  }
-}
 body {
   background: linear-gradient(rgba(92, 233, 219, 0.445), rgb(2, 2, 133));
 }
-body .container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-body .bubble {
-  position: absolute;
-  animation-name: goUp;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-}
-body .bubble svg {
-  position: absolute;
-  animation-name: bubble;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.3s;
-}
-body .bubble .b1 {
-  animation-delay: 0.2s;
-}
-body .bubble .b2 {
-  animation-delay: 0.4s;
-}
-body .bubble .b3 {
-  animation-delay: 0.5s;
-}
-body .bubble .b4 {
-  animation-delay: 0.7s;
-}
 body .light {
   position: absolute;
+  top: -50px;
   left: 50%;
   transform-origin: 50% 0;
 }
 body .rangeContainer {
-  display: grid;
-  grid-template-columns: 70px 150px;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  align-items: center;
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-}
-body .rangeContainer .paramName {
-  color: white;
+  color: #ffffff;
 }
 body .rangeContainer .flex {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 body .rangeContainer .flex img {
   width: 15px;
