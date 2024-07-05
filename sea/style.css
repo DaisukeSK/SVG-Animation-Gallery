@@ -1,9 +1,43 @@
 body {
   background: linear-gradient(rgba(92, 233, 219, 0.445), rgb(2, 2, 133));
+  position: relative;
+}
+body::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, #ffffff, transparent);
+  z-index: 2;
+}
+body .sunLight {
+  position: absolute;
+  top: -397px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  filter: blur(10.5px);
+  transition: all 20s;
+  animation: showUp 10s both;
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .SVGContainer {
+  width: 100%;
 }
 body .light {
   position: absolute;
   top: -50px;
+  top: 0;
   left: 50%;
   transform-origin: 50% 0;
 }

@@ -22,24 +22,52 @@ body .svgContainer .lightningSVG {
   animation-fill-mode: forwards;
 }
 body .rangeContainer {
-  display: grid;
-  grid-template-columns: 80px 150px;
-  grid-template-rows: 1fr 1fr;
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 10;
-}
-body .rangeContainer .paramName {
-  color: white;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
 }
 body .rangeContainer .flex {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
+}
+body .rangeContainer .flex .param {
+  width: 70px;
 }
 body .rangeContainer .flex img {
   width: 15px;
 }
 body .rangeContainer .flex input {
-  width: 100%;
+  width: 110px;
+}
+body .rangeContainer .flex .buttonHolder {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+body .rangeContainer .flex .buttonHolder button {
+  width: 15px;
+  height: 15px;
+  border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.3333333333);
+  border-radius: 3px;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+body .rangeContainer .flex .buttonHolder button:nth-of-type(1) {
+  background: linear-gradient(210deg, rgb(0, 255, 255), rgb(2, 59, 163));
+}
+body .rangeContainer .flex .buttonHolder button:nth-of-type(2) {
+  background: linear-gradient(210deg, rgb(255, 96, 96), rgb(255, 0, 0));
+}
+body .rangeContainer .flex .buttonHolder button:nth-of-type(3) {
+  background: linear-gradient(210deg, rgb(255, 250, 96), rgb(255, 250, 0));
+}
+body .rangeContainer .flex .buttonHolder button:hover {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

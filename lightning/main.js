@@ -3,9 +3,13 @@ const svgContainer=document.querySelector(".svgContainer");
 const animate=document.querySelector("animate");
 const centralize=document.querySelector('input[name="centralize"]');
 const amount=document.querySelector('input[name="amount"]');
+const colorButtons=document.querySelectorAll('.buttonHolder button');
 
 const lightningsSVGs=[];
 let lightningIntv;
+
+const innerColors=['#a9d9ff','#FF0000','#FFFFDA']
+const outerColors=['#1d98ff','#FF2222','#FFFF28']
 
 fetch("./lightning.json")
 .then((data)=>{
@@ -48,13 +52,34 @@ amount.oninput=(e)=>{
     makeLightning(100+900*(1-e.target.value), +centralize.value);
 };
 
+colorButtons.forEach((btn,i)=>{
+    btn.onclick=(e)=>{
+
+        colorButtons.forEach(b=>{
+            b.style.boxShadow='none'
+            b.style.opacity='.3'
+            b.style.pointerEvents='auto'
+        })
+        
+        e.target.style.boxShadow='0 0 7px #ffffff'
+        e.target.style.opacity='0.7'
+        e.target.style.pointerEvents='none'
+
+        lightningsSVGs.forEach((elm,index)=>{
+            lightningsSVGs[index]=elm
+            .split(/#a9d9ff|#FF0000|#FFFFDA/).join(innerColors[i])
+            .split(/#1d98ff|#FF2222|#FFFF28/).join(outerColors[i])
+        })
+    }
+})
+
 const bgIntv=setInterval(()=>{
-    const rand=Math.random();
+    const rand=Math.random()*70;
     const rand2=Math.random();
     if(rand2>=0.5){
-        animate.setAttribute('values',`rgb(${Math.floor(rand*100)},${Math.floor(rand*100)},${Math.floor(rand*100)});black`);
+        animate.setAttribute('values',`rgb(${rand},${rand},${rand});black`);
         animate.beginElement();
     }
-},1000);
+},2000);
 
 makeLightning(100+900*(1-amount.value), +centralize.value);

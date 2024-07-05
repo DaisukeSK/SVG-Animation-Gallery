@@ -27,10 +27,10 @@ const makeLight=(iteration)=>{
             <stop offset="1" style="stop-color:white;stop-opacity:0"/>
         </linearGradient>
         </defs>
-        <path d="M${width/2},0 l-${width/2},${height} l${width},0 Z" fill="url(#grad_anime)" filter="blur(0px)"/>
+        <path d="M${width/2},0 l-${width/2},${height} l${width},0 Z" fill="url(#grad_anime)" filter="blur(7px)"/>
     </svg>`;
 
-    document.querySelector("body").insertAdjacentHTML("afterbegin",light);
+    document.querySelector(".SVGContainer").insertAdjacentHTML("afterbegin",light);
 
     const newChild=document.querySelector(".light")
 
@@ -54,6 +54,8 @@ const makeLight=(iteration)=>{
 };
 
 document.querySelector('input[name="light"]').oninput=(e)=>{
+    document.querySelector('.sunLight').style.filter=`blur(${(63-7*e.target.value)/4}px)`
+
     clearInterval(Interval_Light);
     Interval_Light=setInterval(()=>{makeLight(3);},6000-e.target.value*1000)
 };
